@@ -19,6 +19,6 @@ public class Main {
 			animal.run(600);
 			animal.swim(300);
 
-		}System.out.println(animal);
+		}
 	}
 }
