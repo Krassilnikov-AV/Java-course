@@ -8,10 +8,15 @@ package animal;
  * Класс Dog
  */
 public class Dog extends Animal {
-	//static private int countDogs=0;
-	public Dog(String name) {
+	private static int countDogs = 0;
+
+	Dog(String name) {
 		super(name);
-		coutAnimals++;
+		countDogs++;
+	}
+
+	static int getCountDogs() {
+		return countDogs;
 	}
 
 	@Override
@@ -20,9 +25,9 @@ public class Dog extends Animal {
 			System.out.println(this.name + " пробежал " + lengthRun + " метров");
 		}
 		if (lengthRun > 1000) {
-			System.out.println("Собака "+this.name+ " " + lengthRun + " метров не пробежит");
+			System.out.println("Собака " + this.name + " " + lengthRun + " метров не пробежит");
 		}
-		if (lengthRun<0) {
+		if (lengthRun < 0) {
 			System.out.println("не допустимое значение!");
 		}
 	}
@@ -32,14 +37,12 @@ public class Dog extends Animal {
 		if (lengthSwim >= 0 && lengthSwim <= 150) {
 			System.out.println(this.name + "пробежал(-а)" + lengthSwim + " метров");
 		}
-		if (lengthSwim > 150){
+		if (lengthSwim > 150) {
 			System.out.println(this.name + " " + lengthSwim + " метров не проплывёт");
 		}
-		if (lengthSwim<0) {
+		if (lengthSwim < 0) {
 			System.out.println("не допустимое значение!");
 		}
 
 	}
-
-
 }

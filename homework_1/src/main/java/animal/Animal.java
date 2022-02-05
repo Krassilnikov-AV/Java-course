@@ -11,6 +11,9 @@ public abstract class Animal {
 	String name;
 	static int coutAnimals = 0;
 
+	public Animal() {
+	}
+
 	public Animal(String name) {
 		coutAnimals++;
 		this.name = name;
@@ -22,4 +25,7 @@ public abstract class Animal {
 	public void swim(long lengthSwim) {
 	}
 
+	public static int getCount() {
+		return coutAnimals;
+	}
 }

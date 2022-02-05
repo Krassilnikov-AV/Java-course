@@ -8,9 +8,15 @@ package animal;
  * Класс Tiger
  */
 public class Tiger extends Animal {
+	private static int countTiger=0;
+
 	public Tiger(String name) {
 		super(name);
-		coutAnimals++;
+		countTiger++;
+	}
+
+	public static int getCountTiger() {
+		return countTiger;
 	}
 
 	@Override
