@@ -6,6 +6,9 @@ package animal;/*
  * Класс animal.Main
  */
 public class Main {
+	/*Случайные числа*/
+	private static final int MIN = 10;
+	private static final int MAX = 100;
 
 	public static void main(String[] args) {
 		int counterAnimals = Animal.getCount();
@@ -21,8 +24,11 @@ public class Main {
 			new Tiger("Шарфан")
 		};
 		for (Animal animal : animals) {
-			animal.run(600);
-			animal.swim(300);
+//			animal.run(600);
+//			animal.swim(300);
+			/*реализация случайных дистанций*/
+			animal.run(MIN+ (int) (Math.random() * MAX));
+			animal.swim(MIN+ (int) (Math.random() * MAX));
 			counterAnimals++;
 			counterDog = Dog.getCountDogs();
 			countDomestiCat = DomesticCat.getCountDomestiCat();
