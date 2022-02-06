@@ -7,7 +7,7 @@ package animal;
 /**
  * Класс Dog
  */
-public class Dog extends Animal {
+class Dog extends Animal {
 	private static int countDogs = 0;
 
 	Dog(String name) {
