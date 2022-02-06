@@ -25,7 +25,7 @@ public class MainApp {
 //	new Dog("Bobok", 250, 100),
 			new HouseCat("Dodo", 150, 50),
 			new Tiger("Shihan", 2500, 800),
-			new Dog("Bobik", 1000, 150)
+//			new Dog("Bobik", 1000, 150)
 		};
 		for (Animal o : animals) {
 			o.swim(150);
