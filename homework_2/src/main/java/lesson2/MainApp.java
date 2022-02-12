@@ -5,7 +5,7 @@
 package lesson2;
 
 /**
- * Класс MainApp
+ * Класс Main
  */
 public class MainApp {
 

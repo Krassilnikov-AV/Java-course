@@ -6,7 +6,7 @@ import homeWork_2.final_version.*;
 
 import java.util.*;
 
-public class MainApp {
+public class Main {
 
 	public static void main(String[] args) {
 		List<Obstracle> obstracles = new ArrayList<>();
