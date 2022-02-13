@@ -116,6 +116,80 @@ public static void main(String[] args) {
 
 		}
 	}*/
+/*
+	public static void main(String[] args) {
+		try {
+			a();
+		} catch (ArithmeticException e) {
+			System.out.println("main перехватил  AE");  // main перехватил  AE
+		}
+	}
+	static void a() {
+		b();
+	}
+
+	static void b() {
+		int x = 10 / 0;
+	}*/
+
+	/*public static void main(String[] args) {
+		// не проверяемое исключение
+		int x = 10 / 0;
+		// проверяемое исключение
+		try {
+			FileOutputStream out=new FileOutputStream("1.txt");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}*/
+	/*- - - - - - - - - - - - - - - - - - - - - - - - - */
+	/*Выброс через throw*//*
+	public static void main(String[] args) {
+		System.out.println(1);              // 1
+		try {
+			throw new RuntimeException("Runtime Exception!!!");
+		} catch (RuntimeException e) {
+			System.out.println("RE");      // RE
+		}
+	}*/
+	/*- - - - - - - - - - - - - - - - - - - - - - - - - */
+
+	/*пример использования исключений в "бою"*/
+/*	public static void main(String[] args) throws Exception {
+		System.out.println(1);          //1
+		int coef = 0;
+		try {
+			coef = sdrt(-100);
+		} catch (ArithmeticException e) {
+			coef = 7;
+		}
+		// выброс ещё одного исключения
+		try {
+
+		} catch (RuntimeException e) {
+			System.out.println(1);
+			throw new ArithmeticException("Exception thrown!!!!");
+
+		}
+	}
+*/
+	/*ситуация "не хочу обрабатывать исключение"*/
+/*
+	public static void doSomething() throws FileNotFoundException {
+		FileOutputStream out = new FileOutputStream("1.txt");
+	}
+
+	private static int sdrt(int n) {
+		if (n < 0) {
+			// return -1; // не корректно, и не понятно что за вывод
+			throw new ArithmeticException("Невозможно взять корень из отрицательного числа!!!");
+		}
+		return n / 2;
+	}
+*/
+
+
 
 
 }
