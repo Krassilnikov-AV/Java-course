@@ -188,8 +188,56 @@ public static void main(String[] args) {
 		return n / 2;
 	}
 */
+	/*- - - - - - - - - - - - - - - - - - - - - - - - - */
 
+/*public static void main(String[] args) {
+		try {
+			ReportMaker.makePDFReport("1.txt", "rtsrtrst");
+		} catch (IOException e) {
+			Alert alert = new Alert(Alert.AlertType.ERROR);
+			alert.showAndWait();
+		}
+	}*/
 
+	/*public static void main(String[] args) {
+		try{
+			int x=10/0;
 
+		}catch (NullPointerException e) {
+			System.out.println("Exception");
+		} finally {
+			System.out.println(1); // 1
+			                        // Exception in thread "main" java.lang.ArithmeticException: / by zero
+			                        //	at lesson_3.MainException.main(MainException.java:202)
+		}
+	} */
+
+	/*- - - - - - - - - - - - - - - - - - - - - - - - - */
+
+	/*
+	public static void main(String[] args) {
+		System.out.println(doSomething());   //  2
+	}
+
+	public static int doSomething() {
+		try {
+			return 1;
+		} finally {
+			return 2;   // так лучше не делать, чтоб не видеть странного поведения программы!
+			// finally обычно служит для закрытия потоков.
+		}
+		try (FileOutputStream out = new FileOutputStream("1.txt")) {
+      // FileOutputStream является наследником AutoCloseable и поэтому может применять с 7ой Java try с ресурсами
+// так же можно создавать свои классы наследоваясь от AutoCloseable
+		} catch (IOException e) {
+			System.out.println("connection....");
+		}
+	}*/
+/*- - - - - - - - - - - - - - - - - - - - - */
+
+	// выброс собственно созданного исключения
+	public static void main(String[] args) {
+		throw new MyLibException();
+	}
 
 }
