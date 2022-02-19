@@ -1,4 +1,4 @@
-package com.multithreading.lesson;
+package com.multithreading.lesson.p1;
 
 /**
  * 3-ий способ создания Thread через анонимный класс

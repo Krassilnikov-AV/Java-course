@@ -2,7 +2,7 @@
  * Copyright (c) 2022 Tander, All Rights Reserved.
  */
 
-package com.multithreading.lesson;
+package com.multithreading.lesson.p1;
 
 /**
  * Класс ThreadeOrderApp не гарантирует порядочного выполнения потоков

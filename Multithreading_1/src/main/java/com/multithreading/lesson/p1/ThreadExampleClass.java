@@ -2,17 +2,19 @@
  * Copyright (c) 2022 Tander, All Rights Reserved.
  */
 
-package com.multithreading.lesson;
+package com.multithreading.lesson.p1;
 
-/*2-ой вариант создания потока - реализация интерфейса Runnable
- * - более простой вариант создания потоков*/
+/*1-ый вариант создания потока - наследование от класса Thread
+ * - не удобно если класс наследуется от другого класса
+ * - если как то подкрутить многопоточность*/
 
-public class RunnableExampleClass implements Runnable {
+
+public class ThreadExampleClass extends Thread {
 
 	@Override
 	public void run() {
 		for (int i = 0; i < 10; i++) {
-			System.out.println("run-" + i);
+			System.out.println("thread-" + i);
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
@@ -22,7 +24,7 @@ public class RunnableExampleClass implements Runnable {
 	}
 
 	public static void main(String[] args) {
-		Thread t = new Thread(new RunnableExampleClass());
+		Thread t = new ThreadExampleClass();
 		t.start();
 		for (int i = 0; i < 10; i++) {
 			System.out.println("main-" + i);

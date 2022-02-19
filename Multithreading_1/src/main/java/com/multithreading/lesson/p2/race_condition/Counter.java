@@ -2,7 +2,7 @@
  * Copyright (c) 2022 Tander, All Rights Reserved.
  */
 
-package com.multithreading.lesson.race_condition;
+package com.multithreading.lesson.p2.race_condition;
 
 /**
  * Класс Counter

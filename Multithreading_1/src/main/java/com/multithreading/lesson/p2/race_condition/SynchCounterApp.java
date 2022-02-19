@@ -2,7 +2,7 @@
  * Copyright (c) 2022 Tander, All Rights Reserved.
  */
 
-package com.multithreading.lesson.race_condition;
+package com.multithreading.lesson.p2.race_condition;
 
 /**
  * Класс SynchCounterApp
@@ -36,7 +36,7 @@ public class SynchCounterApp {
 		try {
 			incThread.start();
 			decThread.start();
-			incThread.join();
+			incThread.join();     // в данном случае будут работать по одному  и последовательно
 			decThread.join();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
