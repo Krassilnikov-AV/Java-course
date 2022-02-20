@@ -19,6 +19,7 @@ public class SynchMonitorApp {
 
 	private void method() {
 		try {
+		// часть будет выполняться параллельно
 			System.out.println("NonSynch-Begin " + Thread.currentThread().getName());
 			for (int i = 0; i < 3; i++) {
 				System.out.println("...");
@@ -26,6 +27,7 @@ public class SynchMonitorApp {
 			}
 			System.out.println("NonSynch-End " + Thread.currentThread().getName());
 			synchronized (monitor) {
+		// часть будет выполняться последовательно
 				System.out.println("Synch-Begin " + Thread.currentThread().getName());
 				for (int i = 0; i < 3; i++) {
 					System.out.println("...");
