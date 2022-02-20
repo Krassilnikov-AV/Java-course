@@ -7,6 +7,9 @@ package com.multithreading.lesson.p2.race_condition;
 /**
  * Класс SynchCounterApp
  * - при запуске напианного класса всегда будет ноль, т.к. потоки синхранизированы
+ * - данный пример показывает ка избавиться от race condition при помощи синхронизации
+ * -
+ *
  */
 public class SynchCounterApp {
 	public static void main(String[] args) {
