@@ -6,7 +6,7 @@ package com.multithreading.lesson.p4_deadlock;
 
 /**
  * Класс DeadlockRepaired
- * - представляет решение проблемы Deadlock.
+ * - представляет решение проблемы Deadlock, путём замны вызова порядка мониторов.
  *
  * Вывод в консоли:
  *
