@@ -4,8 +4,6 @@
 
 import homeWork_2.final_version.*;
 
-import java.util.*;
-
 public class Main {
 
 	public static void main(String[] args) {
