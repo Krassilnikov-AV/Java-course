@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56dc8fbd-bbcb-4843-bb4e-3726144594f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/task2/phonebook/MainPhoneApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/task2/words/MainAppTask2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/task2/phonebook/PhoneBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task2/phonebook/MainPhoneApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task2/phonebook/MainPhoneApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task2/words/MainAppTask2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task2/words/MainAppTask2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/task2/words/MainAppTask2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="33" column="32" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="39" />
+            <state relative-caret-position="453">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -37,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/task2/phonebook/PhoneBook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            <state relative-caret-position="96">
+              <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding>
                 <element signature="e#201#202#0" expanded="true" />
                 <element signature="e#234#235#0" expanded="true" />
@@ -51,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/task2/phonebook/MainPhoneApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="95">
+              <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -104,8 +106,8 @@
         <option value="$PROJECT_DIR$/src/main/java/task2/MainAppTask2.java" />
         <option value="$PROJECT_DIR$/src/main/java/task2/phonebook/PhoneBook.java" />
         <option value="$PROJECT_DIR$/src/main/java/task2/phonebook/MainPhonApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/task2/phonebook/MainPhoneApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/task2/words/MainAppTask2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task2/phonebook/MainPhoneApp.java" />
       </list>
     </option>
   </component>
@@ -121,11 +123,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="136" />
-    <option name="y" value="430" />
-    <option name="width" value="1395" />
-    <option name="height" value="579" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="197" />
+    <option name="y" value="88" />
+    <option name="width" value="1432" />
+    <option name="height" value="709" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -209,7 +211,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MainAppTask2">
+  <component name="RunManager" selected="Application.MainPhoneApp">
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -326,8 +328,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainAppTask2" />
         <item itemvalue="Application.MainPhoneApp" />
+        <item itemvalue="Application.MainAppTask2" />
         <item itemvalue="Application.MainAppTask" />
         <item itemvalue="Application.MainAppTaskSimpleSwap" />
         <item itemvalue="Application.MainAppTaskSimpleSwap" />
@@ -335,7 +337,7 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="190" y="50" width="930" height="567" extended-state="0" />
+    <frame x="158" y="71" width="1145" height="567" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.17816092" />
@@ -344,7 +346,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3255814" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39692307" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30097088" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3469388" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -369,7 +371,8 @@
     <MESSAGE value="сollection" />
     <MESSAGE value="task collections_ point 1" />
     <MESSAGE value="task collections_ point the others" />
-    <option name="LAST_COMMIT_MESSAGE" value="task collections_ point the others" />
+    <MESSAGE value="task collections_task2" />
+    <option name="LAST_COMMIT_MESSAGE" value="task collections_task2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -593,17 +596,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/task2/phonebook/MainPhoneApp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/task2/words/MainAppTask2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="453">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/task2/phonebook/PhoneBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        <state relative-caret-position="96">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding>
             <element signature="e#201#202#0" expanded="true" />
             <element signature="e#234#235#0" expanded="true" />
@@ -615,10 +618,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/task2/words/MainAppTask2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/task2/phonebook/MainPhoneApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="39" />
+        <state relative-caret-position="95">
+          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
         </state>
       </provider>
     </entry>
