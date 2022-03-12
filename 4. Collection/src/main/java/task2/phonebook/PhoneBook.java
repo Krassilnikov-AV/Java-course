@@ -5,8 +5,6 @@
 package task2.phonebook;
 
 
-import java.util.*;
-
 public class PhoneBook {
 	HashMap<String, HashSet<String>> hmPhoneBook;
 

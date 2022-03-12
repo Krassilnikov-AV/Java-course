@@ -4,8 +4,6 @@
 
 package task2.words;
 
-import java.util.*;
-
 public class MainAppTask2 {
 
 	public static void main(String[] args) {
