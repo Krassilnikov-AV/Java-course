@@ -10,9 +10,6 @@ import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
 
-/**
- * Класс MainClass
- */
 public class MainClass {
 
 	static class Person {
@@ -76,10 +73,23 @@ public class MainClass {
 //		mappingEx();
 //		reduceEx();
 //		intStreamsEx();
-		streamFromFileEx();
+//		streamFromFileEx();
 //		simpleStringEx();
-		streamFromFileEx_();
+//		streamFromFileEx_();
+		streamFromThread();
+	}
+	/**/
 
+	private static void streamFromThread() {
+		IntStream.rangeClosed(0, 1000).parallel().filter(n -> {
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.out.println(Thread.currentThread().getName());
+			return n % 2 == 0;
+		}).forEach(System.out::println);
 	}
 
 	/*Получение уникальных слов из файла */
@@ -93,14 +103,14 @@ public class MainClass {
 			System.out.println("-------------------------");
 //в приведённом примере покажет поток потоков строк,
 			Files.lines(Paths.get("text.txt"))
-				.map(line->line.split("\\s"))
+				.map(line -> line.split("\\s"))
 				// заворачиваем каждый массив в поток
 				.map(Arrays::stream)
 				.distinct()
 				.forEach(System.out::println);
 			System.out.println("-------------------------");
 			System.out.println(Files.lines(Paths.get("text.txt"))
-				.map(line->line.split("\\s"))
+				.map(line -> line.split("\\s"))
 				// преобразование каждой строки к массиву-> заворачивание в поток
 				.flatMap(Arrays::stream)
 				// при помощи distinct() получаем уникальные слова
