@@ -249,7 +249,7 @@ public class Race {
 }
 
 
-IX Stream API
+VIII Stream API
 
 1. Создайте  массив  с  набором  слов,  и  с  помощью  Stream  API  найдите  наиболее  часто
    встречающееся; 
