@@ -77,8 +77,11 @@ public class MainClass {
 //		simpleStringEx();
 //		streamFromFileEx_();
 //		streamFromThread();
-		mostCommon();
+//		mostCommon();
+
 	}
+
+
 
 	/*найти наиболее встречающееся слово*/
 	private static void mostCommon() {
