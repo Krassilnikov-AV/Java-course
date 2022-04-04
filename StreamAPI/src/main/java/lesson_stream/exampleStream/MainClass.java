@@ -76,9 +76,21 @@ public class MainClass {
 //		streamFromFileEx();
 //		simpleStringEx();
 //		streamFromFileEx_();
-		streamFromThread();
+//		streamFromThread();
+		mostCommon();
 	}
-	/**/
+
+	/*найти наиболее встречающееся слово*/
+	private static void mostCommon() {
+		String input = "kjdf j df iue iue fdj j j";
+		String word = Arrays.stream(input.split(" "))
+			.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+			.entrySet().stream()
+			.max(Map.Entry.comparingByValue())
+			.map(Map.Entry::getKey)
+			.orElse(null);
+		System.out.println("Most popular word is " + word);
+	}
 
 	private static void streamFromThread() {
 		IntStream.rangeClosed(0, 1000).parallel().filter(n -> {
