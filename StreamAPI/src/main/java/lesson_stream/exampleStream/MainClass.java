@@ -14,7 +14,6 @@ public class MainClass {
 
 	static class Person {
 
-
 		enum Position {
 			ENGINER, DIRECTOR, MANAGER;
 		}
@@ -80,7 +79,6 @@ public class MainClass {
 //		mostCommon();
 
 	}
-
 
 
 	/*найти наиболее встречающееся слово*/
@@ -178,7 +176,7 @@ public class MainClass {
 			new Person("Bob2", 35, Person.Position.DIRECTOR),
 			new Person("Bob3", 25, Person.Position.ENGINER),
 			new Person("Bob4", 42, Person.Position.ENGINER),
-			new Person("Bob5", 55, Person.Position.ENGINER),
+			new Person("Bo b5", 55, Person.Position.ENGINER),
 			new Person("Bob6", 55, Person.Position.MANAGER),
 			new Person("Bob7", 55, Person.Position.MANAGER)
 		));
