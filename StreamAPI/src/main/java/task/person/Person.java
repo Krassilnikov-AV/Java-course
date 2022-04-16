@@ -4,9 +4,6 @@
 
 package task.person;
 
-/**
- * Класс Person
- */
 public class Person {
 
 	String name;
