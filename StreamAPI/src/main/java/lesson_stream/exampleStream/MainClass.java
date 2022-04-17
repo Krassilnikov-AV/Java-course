@@ -64,7 +64,7 @@ public class MainClass {
 //		}).forEach(System.out::println);
 
 		//		Files.lines(Path.get("text.txt")).map(line -> line.split("\\s"));
-//		firstEx();
+		firstEx();
 //		secondEx();
 //		thirdEx();
 //		matchEx();
@@ -175,8 +175,8 @@ public class MainClass {
 			new Person("Bob1", 55, Person.Position.MANAGER),
 			new Person("Bob2", 35, Person.Position.DIRECTOR),
 			new Person("Bob3", 25, Person.Position.ENGINER),
-			new Person("Bob4", 42, Person.Position.ENGINER),
-			new Person("Bo b5", 55, Person.Position.ENGINER),
+			new Person("Bob4", 59, Person.Position.ENGINER),
+			new Person("Bo b5", 43, Person.Position.ENGINER),
 			new Person("Bob6", 55, Person.Position.MANAGER),
 			new Person("Bob7", 55, Person.Position.MANAGER)
 		));

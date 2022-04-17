@@ -8,9 +8,9 @@ public class Person {
 
 	String name;
 	int age;
-	int salary;
+	double salary;
 
-	public Person(String name, int age, int salary) {
+	public Person(String name, int age, double salary) {
 		this.name = name;
 		this.age = age;
 		this.salary = salary;
@@ -25,7 +25,13 @@ public class Person {
 		return age;
 	}
 
-	public int getSalary() {
+	public double getSalary() {
 		return salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Имя сотрдника " +
+			"name='" + name + '\'';
 	}
 }

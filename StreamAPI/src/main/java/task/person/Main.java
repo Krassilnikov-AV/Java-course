@@ -6,13 +6,15 @@ package task.person;
 
 import lesson_stream.exampleStream.People;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class Main {
 
 	public static void main(String[] args) {
-		middleAge();
-		middlesalary();
+//		middleAge();
+//		middlesalary();
+		oldsterPerson();
 	}
 
 	/*Найти средний возраст среди представленных людей	 */
@@ -32,20 +34,23 @@ public class Main {
 			new Person("Пётр", 23, 26000),
 			new Person("Данил", 21, 23000),
 			new Person("Leonid", 25, 39000)).stream()
-			.mapToInt(Person::getSalary).average().getAsDouble());
+			.mapToDouble(Person::getSalary).average().getAsDouble());
 	}
 
 	/*Напишите метод, способный найти в массиве сотрудников из п. 2 найдите N самых старших
 сотрудников и отпечатает в консоль сообщение вида
 “N самых старших сотрудников зовут: имя1, имя2, имяN;”.*/
 
-	private static void oldsterPrson() {
-//		System.out.println(Arrays.asList(
-//			new Person("Иван", 19, 26000),
-//			new Person("Пётр", 23, 26000),
-//			new Person("Данил", 21, 23000),
-//			new Person("Leonid", 25, 39000)).stream()
-//			.distinct().sorted(Comparator.reverseOrder()).limit(3)
-//			.forEach(System.out::println));
+	private static void oldsterPerson() {
+		Person[] persons =
+			{new Person("Иван", 19, 26000),
+				new Person("Пётр", 23, 26000),
+				new Person("Данил", 21, 23000),
+				new Person("Leonid", 25, 39000)};
+		final int N = 3;
+		System.out.println(Arrays.stream(persons).sorted((o1, o2) -> o2.age - o1.age).limit(N)
+			.map(Person::getName)
+			.collect(Collectors.joining(", ", N + " самых старших сотрудников зовут: ", ", ")));
+		//System.out.println(persons.toString());
 	}
 }
