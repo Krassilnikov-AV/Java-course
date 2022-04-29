@@ -79,6 +79,7 @@ public class MainApp {
     }
 
     public static void connect() throws SQLException {
+        System.out.println("=====// Получение соединения");
         try {
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection("jdbc:sqlite:main.db");
@@ -90,6 +91,7 @@ public class MainApp {
     }
 
     public static void disconnect() {
+        System.out.println("====//подключение к БД");
         try {
             statement.close();
         } catch (SQLException e) {

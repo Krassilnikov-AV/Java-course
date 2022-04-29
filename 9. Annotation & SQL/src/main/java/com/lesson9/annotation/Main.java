@@ -1,4 +1,4 @@
-package com.lesson9.start;
+package com.lesson9.annotation;
 
 import com.lesson9.Cat;
 
