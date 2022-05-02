@@ -1,0 +1,242 @@
+create table subject
+(
+  id            SERIAL PRIMARY KEY,
+  name_subjects CHARACTER VARYING(30)
+);
+
+create table progress
+(
+  id      SERIAL PRIMARY KEY,
+  student CHARACTER VARYING(30),
+  subject CHARACTER VARYING(30),
+  score   INTEGER
+);
+
+create table students
+(
+  id    SERIAL PRIMARY KEY,
+  name  text,
+  score INT
+);
+-- просмотр данных таблицы
+select *
+from students;
+-- добавление поля в таблицу
+insert into students (name, score)
+values ('Bob2', 50);
+-- добавление нескольких полей в таблицу
+insert into students (name, score)
+values ('Bob1', 100),
+       ('Bob2', 80),
+       ('Bob3', 70),
+       ('Bob4', 50),
+       ('Bob5', 55)
+;
+-- выбор столбцов, где id > 1
+select *
+from students
+where id > 1;
+
+-- отсортировть данные по убыванию
+select *
+from students
+where id > 1
+order by score desc;
+
+-- изменение значение столбца score по условию имени
+UPDATE students
+SET score = 70
+WHERE name = 'Bob3' RETURNING *;
+
+--удаление студента у которого 100, без условия почистит все записи
+DELETE
+FROM students
+WHERE score = 100 RETURNING *;
+
+--удаление таблицы студентов, более быстрый
+TRUNCATE students;
+-- добавление нескольких полей в таблицу
+insert into students (name, score)
+values ('Micha', 100),
+       ('Maickl', 80),
+       ('Sasha', 70),
+       ('lex', 50),
+       ('Jon', 55)
+;
+-- вытащить всех студентов у которых имя начинается на 'Bob'
+-- если % вначале - значит заканчивается на слово и наоборот
+-- если с обоеих сторон, значит где то сидит в середине
+SELECT *
+FROM students
+WHERE name LIKE 'Bob%'
+
+insert into students (name, score)
+values ('Max', 100),
+       ('John', 55)
+;
+-- имя из 4-х букви 2ая буква 'o' при помощи _
+SELECT *
+FROM students
+WHERE name LIKE '_o__';
+
+-- выбор студентов у которых очки от 50 до 75
+SELECT *
+FROM students
+WHERE score BETWEEN 50 AND 75;
+--преобразование значений из 100 бальной в 20ти бальную
+SELECT name, score, score / 5 AS another_score
+FROM students;
+
+-- набор уеикальных баллов
+SELECT DISTINCT score
+FROM students;
+-- выбор 3-х лучших результатов
+SELECT *
+FROM students
+ORDER BY score DESC
+LIMIT 3;
+--
+SELECT *
+FROM students
+ORDER BY score DESC
+LIMIT 3 OFFSET 3;
+-- пометить значения буквами 'A' 'B' 'C'
+SELECT name, score, CASE WHEN score = 55 THEN 'A' WHEN score = 70 THEN 'B' ELSE 'C' END AS mark
+FROM students;
+--создание таблицы в которой ставится оценка, дефолтовая =4
+
+--создание таблицы в которой ставится оценка, c заданными пределами
+CREATE TABLE progress_demo
+(
+  id      serial,
+  subject text,
+  mark    int CHECK (mark >= 2 AND mark <= 5)
+);
+--вставка оценки 6 выдаст ошибку  ОШИБКА: новая строка в отношении "progress_demo" нарушает ограничение-проверку "progress_demo_mark_check"
+INSERT INTO progress_demo (subject, mark)
+VALUES ('Chemistry', 6);
+-- создание уникальных значений в таблице
+CREATE TABLE demo
+(
+  id      serial,
+  subject text UNIQUE
+);
+-- либо другим способом, можно несколько столбцов в скобках, покажет уникальность пример с серией и номером.
+CREATE TABLE dema
+(
+  id      serial,
+  subject text,
+  CONSTRAINT unique_subject UNIQUE (subject)
+);
+--проверка: занесение данных
+INSERT INTO dema (subject)
+VALUES ('Mathematik');
+--проверка: просмотр
+select *
+from dema;
+DROP TABLE dema;
+
+-- указание первичный ключ
+CREATE TABLE dema
+(
+  id      serial PRIMARY KEY,
+  subject text,
+  CONSTRAINT unique_subject UNIQUE (subject)
+);
+--другой способ
+CREATE TABLE demas
+(
+  id      serial,
+  subject text,
+  CONSTRAINT unique_subject UNIQUE (subject),
+  PRIMARY KEY (id)
+);
+-- внешний ключ у таблицы успеваемости id студента
+ALTER TABLE progress_demo
+  ADD FOREIGN KEY (students_id) REFERENCES students (id);
+-- проверка раты внешнего ключа
+select *
+from students;
+-- сказать что Bob сдал химию 35	Bob4	50
+insert INTO progress_demo(subject, mark, students_id)
+VALUES ('Chemistry', 5, 35);
+select *
+from progress_demo;
+-- сказать что не существующий студент сдал химию на 5
+-- вывод: [23503] ОШИБКА: INSERT или UPDATE в таблице "progress_demo" нарушает ограничение внешнего ключа "progress_demo_students_id_fkey"
+insert INTO progress_demo(subject, mark, students_id)
+VALUES ('Chemistry', 5, 59);
+-- удаление не удастся при ссылке на id
+delete
+FROM students
+WHERE id = 35;
+-- 1-ый способ 'ON DELETE CASCADE' - если удалят записи в таблице, то все связи удалятся
+-- -значит удалятся все задействованные записи с этим id
+ALTER TABLE progress_demo
+  ADD FOREIGN KEY (students_id) REFERENCES students (id) ON DELETE CASCADE;
+
+--2-ой способ при попытке удалить ни чего не сможем сделать, почистить табличку с оценками потом удалять студента
+ALTER TABLE progress_demo
+  ADD FOREIGN KEY (students_id) REFERENCES students (id) ON DELETE RESTRICT;
+-- удалили студента, позволит не ссылаться, просто нулевая оценка NULL
+ALTER TABLE progress_demo
+  ADD FOREIGN KEY (students_id) REFERENCES students (id) ON DELETE SET NULL;
+-- удалили студента, позволит не ссылаться, просто дефолтное значение
+ALTER TABLE progress_demo
+  ADD FOREIGN KEY (students_id) REFERENCES students (id) ON DELETE SET DEFAULT;
+
+-- модификация таблицы с данными:
+-- ADD COLUMN позволяет добавить столбец
+ALTer TABLE progress_demo
+  ADD COLUMN column_name;
+
+--  DROP NOT NULL позволяет удалить ограничение
+ALTer TABLE tabl_name
+  ALTER COLUMN column_name DROP NOT NULL;
+--  DROP CONSTRAINT позволяет удалить ограничение по имени
+ALTer TABLE tabl_name
+  DROP CONSTRAINT имя;
+-- изменение типа столбца
+ALTER TABLE table_name
+  ALTER COLUMN SET DATA TYPE integer;
+-- c применением условия
+ALTER TABLE table_name
+  ALTER COLUMN SET DATA TYPE integer USING (CASE WHEN mark ='A' THEN 5 WHEN mark ='B' THEN 4
+  ELSE 0 END);
+
+--выбор студентов >45 по возрастанию id
+SELECT score, name, id
+FROM students
+WHERE score > 45
+ORDER BY name ASC;
+
+-- запомнить запрос
+CREATE VIEW my_view AS SELECT score FROM students;
+-- смотреть этот запрос
+SELECT *FROM my_view;
+SELECT *FROM students;
+-- замена значения
+UPDATE students SET score =150 WHERE id=43;
+-- сохранить запрос с тем что он выдал
+CREATE MATERIALIZED VIEW mmv AS SELECT score FROM students WHERE score <>50;
+select *from mmv;
+-- обновление данных
+REFRESH MATERIALIZED VIEW mmv;
+
+--транзакции:
+-- смотреть уровень транзакции
+SHOW default_transaction_isolation;
+-- указать уровень изоляции
+SET TRANSACTION ISOLATION LEVEL ;
+-- начать транзакцию
+BEGIN TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+
+INSERT INTO students(name, score) VALUES ('Ivan', 100);
+
+select *from students;
+-- выполнить commit, чтобы увидеть добавленную запись с другой транзакции
+commit;
+-- commit по  умолчанию
+BEGIN TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ;
