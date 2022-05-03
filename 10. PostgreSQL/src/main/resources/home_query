@@ -1,0 +1,90 @@
+-- ЗАДАНИЕ
+--● Создайте таблицу студенты (students): id, имя, серия паспорта, номер паспорта;
+create table students
+(
+  id         SERIAL PRIMARY KEY,
+  name       text NOT NULL,
+  pas_Series NUMERIC UNIQUE,
+  pas_Number NUMERIC UNIQUE
+);
+drop table students;
+select *
+from students;
+INSERT INTO students (name, pas_Series, pas_Number)
+VALUES ('Филипп', 3455, 5346),
+       ('Алиса', 3456, 5376),
+       ('Лида', 3465, 5246),
+       ('Филипп', 3479, 5546),
+       ('Филипп', 3448, 9846);
+--● Создайте таблицу Предметы (subjects): id, название предмета;
+CREATE TABLE subjects
+(
+  id      SERIAL PRIMARY KEY,
+  subject TEXT NOT NULL UNIQUE
+);
+INSERT INTO subjects(subject)
+VALUES ('Химия'),
+       ('Русский язык'),
+       ('Литература'),
+       ('Геометрия'),
+       ('Математика')
+;
+SELECT *
+from progress;
+drop TABLE subjects;
+--● Создайте таблицу Успеваемость (progress): id, студент, предмет, оценка;
+--● Оценка может находиться в пределах от 2 до 5;
+CREATE TABLE progress
+(
+  id         SERIAL
+    constraint progress_pk primary key,
+  student_id INTEGER NOT NULL
+    CONSTRAINT progress_students_id_fk references students on DELETE cascade,
+  subject_id INTEGER NOT NULL
+    CONSTRAINT progress_subjects_id_fk references subjects,
+  --   FOREIGN KEY (student) REFERENCES students (id) ON DELETE CASCADE,
+  --   FOREIGN KEY (subject) REFERENCES subjects (id) ON DELETE CASCADE,
+  score      INTEGER
+    constraint progress_score_check CHECK (score <= 5 AND score >= 2)
+);
+drop table progress;
+--занесение оценок
+INSERT INTO progress(student_id, subject_id, score)
+VALUES (1, 1, 4),
+       (2, 1, 4),
+       (3, 1, 3),
+       (4, 1, 3),
+       (5, 1, 3);
+select *
+from progress;
+select *
+from students;
+
+-- drop table progress;
+
+-- ● Вывести список студентов, сдавших определенный предмет, на оценку выше 3;
+SELECT students.name
+FROM progress
+       inner JOIN students s ON progress.student_id = s.id
+       inner JOIN subjects s2 ON progress.subject_id = s2.id
+WHERE s2.name = 'Химия'
+  and progress.score > 3;
+
+-- создать индекс по имени студента что повышает время поиска
+CREATE INDEX name_idx ON students (name);
+-- создание индекса уникальности паспортных столбцов
+CREATE UNIQUE INDEX p_ser_unique ON students (pas_Series);
+CREATE UNIQUE INDEX n_ser_unique ON students (pas_Number);
+
+--● При удалении студента из таблицы, вся его успеваемость тоже должна быть удалена;
+
+--● Посчитать средний бал по определенному предмету;
+SELECT AVG(score) FROM progress
+JOIN subjects ON subjects.id=progress.student AND progress.subject_id="Химия";
+--● Посчитать средний балл по определенному студенту;
+SELECT AVG(score) FROM progress
+JOIN subjects ON progress.id=progress.subject_id
+JOIN students ON students.id=progress.student_id AND students.name='Филипп';
+--● Пара серия-номер пасорта должны быть уникальны в таблице Студенты;
+--● Найти три премета, которые сдали наибольшее количество студентов;
+select *from progress;
