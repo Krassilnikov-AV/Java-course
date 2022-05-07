@@ -1,0 +1,25 @@
+-- //-- запросы на создание таблиц по тех докумету
+
+CREATE DATABASE techDocument;
+
+CREATE TABLE workPiece
+(
+  id                      SERIAL PRIMARY KEY,
+  num_Workshop            SMALLINT    NOT NULL,
+  num_WorkPiece           VARCHAR(30) NOT NULL,
+  num_Operation           SMALLINT    NOT NULL,
+  name_Operation          VARCHAR(20) NOT NULL,
+  name_processing_Machine VARCHAR(10) NOT NULL,
+  num_category            SMALLINT    NOT NULL,
+  num_Machine             SMALLINT    NOT NULL,
+  time_processing_Tmash   NUMERIC,
+  time_procesing_Guide    NUMERIC,
+  time_Operation          NUMERIC
+);
+
+
+CREATE TABLE techDocument
+(
+  id                      SERIAL PRIMARY KEY,
+  date_Document time,
+);
