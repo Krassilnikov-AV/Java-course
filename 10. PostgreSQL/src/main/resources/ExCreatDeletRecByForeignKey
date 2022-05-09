@@ -2,38 +2,25 @@
 
 CREATE TABLE books
 (
-
   Id         SERIAL PRIMARY KEY,
-
   title      TEXT    NOT NULL,
-
   count_page INTEGER NOT NULL CHECK (count_page > 0),
-
   price      REAL CHECK (price > 0)
-
 );
 
 CREATE TABLE auth
 (
-
   id   SERIAL PRIMARY KEY,
-
   name TEXT NOT NULL,
-
   age  INTEGER CHECK (age > 16)
-
 );
 
 CREATE TABLE auth_book
 (
-
   auth_id  INTEGER NOT NULL,
-
   books_id INTEGER NOT NULL,
-
   FOREIGN KEY (auth_id) REFERENCES auth (id) ON DELETE CASCADE,
   FOREIGN KEY (books_id) REFERENCES books (id) ON DELETE CASCADE
-
 );
 -- Сперва добавим несколько строк в таблицу книг
 
