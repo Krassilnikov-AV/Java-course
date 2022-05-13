@@ -23,3 +23,197 @@ CREATE TABLE techDocument
   id                      SERIAL PRIMARY KEY,
   date_Document time,
 );
+--======================================================
+-- запросы на создание таблиц по тех документу
+--======================================================
+CREATE DATABASE techDocument;
+
+CREATE TABLE workPiece
+(
+  id                      SERIAL PRIMARY KEY,
+  id_techDocument         INT         NOT NULL,
+  FOREIGN KEY (id_techDocument) REFERENCES techDocument (id) ON DELETE CASCADE,
+  num_Workshop            SMALLINT    NOT NULL,
+  num_WorkPiece           VARCHAR(30) NOT NULL,
+  num_Operation           SMALLINT    NOT NULL,
+  name_Operation          VARCHAR(20) NOT NULL,
+  name_processing_Machine VARCHAR(10) NOT NULL,
+  num_category            SMALLINT    NOT NULL,
+  CONSTRAINT workPiece_category_check CHECK (num_category >= 2 AND num_category <= 5),
+  num_Machine             SMALLINT    NOT NULL, --quantity кол-во станков
+  time_processing_Tmash   NUMERIC,
+  time_procesing_Guide    NUMERIC,
+  time_Operation          NUMERIC
+);
+-- operations for checking the insertion and deletion of data table workPiece
+DROP TABLE workPiece;
+INSERT INTO workPiece(id_techDocument, num_Workshop, num_WorkPiece, num_Operation, name_Operation,
+                      name_processing_Machine,
+                      num_category, num_Machine, time_procesing_Guide, time_Operation)
+VALUES (1, 792, '5612.326', 5, 'токарная', 'ТВ', '5', 1, 6.9, 0.115);
+select *
+from workPiece;
+--
+DELETE
+FROM techDocument
+WHERE id = 1; -- удаление строки по id заготовки
+
+CREATE TABLE techDocument
+(
+  id              SERIAL PRIMARY KEY,
+  date_Document   DATE,
+--   id_workPiece    INT          NOT NULL,
+--   FOREIGN KEY (id_workPiece) REFERENCES workPiece (id) ON DELETE CASCADE,
+  num_Document    varchar(50)  NOT NULL,
+  basis           VARCHAR(250) NOT NULL,
+  calendar_period TIME,
+  sum_WorkPiece   INT,
+  made_WorkPiece  INT,
+  author          VARCHAR(250),
+  notation        VARCHAR(250), --примечание
+  code_deviation  INT,          -- код отклонения
+  numer_zakaz     INT,          -- номер заказа при наличии
+  remains         INT           -- остатки
+);
+-- operations for checking the insertion and deletion of data table techDocument
+
+DROP TABLE techDocument;
+INSERT INTO techDocument(date_Document, num_Document,
+                         basis, sum_WorkPiece, made_WorkPiece,
+                         notation, code_deviation)
+VALUES ('03/05/2022', '92-123-2022', 'исправление брака', 8, 8, 'устранены дефекты',
+        0101143);
+select *
+from techDocument;
+drop table workPiece;
+
+-- EXAMPLE creating and deleting records by a foreign key
+
+CREATE TABLE books
+(
+
+  Id         SERIAL PRIMARY KEY,
+
+  title      TEXT    NOT NULL,
+
+  count_page INTEGER NOT NULL CHECK (count_page > 0),
+
+  price      REAL CHECK (price > 0)
+
+);
+
+CREATE TABLE auth
+(
+
+  id   SERIAL PRIMARY KEY,
+
+  name TEXT NOT NULL,
+
+  age  INTEGER CHECK (age > 16)
+
+);
+
+CREATE TABLE auth_book
+(
+
+  auth_id  INTEGER NOT NULL,
+
+  books_id INTEGER NOT NULL,
+
+  FOREIGN KEY (auth_id) REFERENCES auth (id) ON DELETE CASCADE,
+  FOREIGN KEY (books_id) REFERENCES books (id) ON DELETE CASCADE
+
+);
+-- Сперва добавим несколько строк в таблицу книг
+
+INSERT INTO books (title, count_page, price)
+
+VALUES ('Белыйклык', 287, 300.00),
+       ('‘Война и мир', 806, 780.00);
+INSERT INTO books (title, count_page, price)
+VALUES ('Пираты карибск. моря', 953, 500.00)
+;
+-- Затемдобавимнесколькоавторов
+
+INSERT INTO auth (id, name, age)
+
+VALUES (1, 'ДжекЛондон', 40),
+       (2, 'Лев Толстой', 82);
+
+-- Мы добавили книги и авторов из предыдущего примера
+
+-- Давайте добавим новую книгу
+
+INSERT INTO books (title, count_page, price)
+
+VALUES ('12 стульев', 516, 480.00);
+select *
+from books;
+-- И добавим авторов, так 12 стульев была написана в соавторстве
+
+-- Затемдобавимнесколькоавторов
+
+INSERT INTO auth (id, name, age)
+
+VALUES (3, '‘ИльяИльф', 39);
+
+INSERT INTO auth (id, name, age)
+
+VALUES (4, 'Евгений Петров', 38);
+
+-- Связываем таблицы authи book
+
+-- для этого наполним данными результирующую таблицу
+
+INSERT INTO auth_book (auth_id, books_id)
+
+VALUES (1, 1),
+       (2, 2);
+
+INSERT INTO auth_book (auth_id, books_id)
+
+VALUES (3, 3),
+       (4, 4);
+select *
+from auth_book;
+INSERT INTO auth_book (auth_id, books_id)
+
+VALUES (4, 3);
+--
+DELETE
+FROM books
+WHERE id = 1;
+
+--
+select *
+from books;
+
+-- Id|title|count_page|price
+--
+-- 2|Войнаимир|806|780.0
+--
+-- 3|12 стульев|516|480.0
+
+select *
+from auth_book;
+
+-- auth_id|books_id
+--
+-- 2|2
+--
+-- 3|3
+--
+-- 4|3
+
+select *
+from auth;
+
+-- id|name|age
+--
+-- 1|ДжекЛондон|40
+--
+-- 2|Лев Толстой|82
+--
+-- 3|Илья Ильф|39
+--
+-- 4|Евгений Петров|38
