@@ -19,27 +19,37 @@
       <StateNumber>889</StateNumber>
       <Owner>postgres</Owner>
     </database>
-    <database id="5" parent="1" name="feedbacker">
+    <database id="5" parent="1" name="customer">
+      <ObjectId>49989</ObjectId>
+      <StateNumber>934</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>494</IntrospectionStateNumber>
+      <Visible>1</Visible>
+      <Relations>sequence|table|49997|49999|1
+sequence|table|50004|50006|1
+</Relations>
+    </database>
+    <database id="6" parent="1" name="feedbacker">
       <ObjectId>41049</ObjectId>
       <StateNumber>660</StateNumber>
       <Owner>postgres</Owner>
     </database>
-    <database id="6" parent="1" name="first_db">
+    <database id="7" parent="1" name="first_db">
       <ObjectId>16393</ObjectId>
       <StateNumber>544</StateNumber>
       <Owner>postgres</Owner>
     </database>
-    <database id="7" parent="1" name="fix-users">
+    <database id="8" parent="1" name="fix-users">
       <ObjectId>32801</ObjectId>
       <StateNumber>610</StateNumber>
       <Owner>postgres</Owner>
     </database>
-    <database id="8" parent="1" name="fix_user_db">
+    <database id="9" parent="1" name="fix_user_db">
       <ObjectId>32821</ObjectId>
       <StateNumber>617</StateNumber>
       <Owner>postgres</Owner>
     </database>
-    <database id="9" parent="1" name="postgres">
+    <database id="10" parent="1" name="postgres">
       <ObjectId>12401</ObjectId>
       <Comment>default administrative connection database</Comment>
       <StateNumber>541</StateNumber>
@@ -54,37 +64,37 @@ sequence|table|49945|49947|1
 sequence|table|49970|49972|1
 </Relations>
     </database>
-    <database id="10" parent="1" name="short_url">
+    <database id="11" parent="1" name="short_url">
       <ObjectId>32857</ObjectId>
       <StateNumber>637</StateNumber>
       <Owner>postgres</Owner>
     </database>
-    <database id="11" parent="1" name="shorter">
+    <database id="12" parent="1" name="shorter">
       <ObjectId>32864</ObjectId>
       <StateNumber>639</StateNumber>
       <Owner>postgres</Owner>
     </database>
-    <database id="12" parent="1" name="springSecuryrtiCourse">
+    <database id="13" parent="1" name="springSecuryrtiCourse">
       <ObjectId>49856</ObjectId>
       <StateNumber>864</StateNumber>
       <Owner>postgres</Owner>
     </database>
-    <database id="13" parent="1" name="students">
+    <database id="14" parent="1" name="students">
       <ObjectId>49242</ObjectId>
       <StateNumber>663</StateNumber>
       <Owner>postgres</Owner>
     </database>
-    <database id="14" parent="1" name="techdocument">
+    <database id="15" parent="1" name="techdocument">
       <ObjectId>49553</ObjectId>
       <StateNumber>777</StateNumber>
       <Owner>postgres</Owner>
     </database>
-    <role id="15" parent="1" name="pg_signal_backend">
+    <role id="16" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="16" parent="1" name="postgres">
+    <role id="17" parent="1" name="postgres">
       <ObjectId>10</ObjectId>
       <SuperRole>1</SuperRole>
       <Inherit>1</Inherit>
@@ -95,58 +105,44 @@ sequence|table|49970|49972|1
       <ConnectionLimit>-1</ConnectionLimit>
       <BypassRls>1</BypassRls>
     </role>
-    <schema id="17" parent="9" name="information_schema">
+    <schema id="18" parent="5" name="information_schema">
       <ObjectId>12113</ObjectId>
       <StateNumber>342</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2022-02-23.20:27:23.966</IntrospectionTimestamp>
-      <IntrospectionStateNumber>492</IntrospectionStateNumber>
     </schema>
-    <schema id="18" parent="9" name="pg_catalog">
+    <schema id="19" parent="5" name="pg_catalog">
       <ObjectId>11</ObjectId>
       <Comment>system catalog schema</Comment>
       <StateNumber>339</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2022-02-23.20:27:24.729</IntrospectionTimestamp>
-      <IntrospectionStateNumber>543</IntrospectionStateNumber>
     </schema>
-    <schema id="19" parent="9" name="pg_temp_1">
+    <schema id="20" parent="5" name="pg_temp_1">
       <ObjectId>11848</ObjectId>
       <StateNumber>104</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2022-02-23.20:27:24.921</IntrospectionTimestamp>
     </schema>
-    <schema id="20" parent="9" name="pg_toast">
+    <schema id="21" parent="5" name="pg_toast">
       <ObjectId>99</ObjectId>
       <Comment>reserved schema for TOAST tables</Comment>
       <StateNumber>1</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2022-02-23.20:27:25.044</IntrospectionTimestamp>
-      <IntrospectionStateNumber>433</IntrospectionStateNumber>
     </schema>
-    <schema id="21" parent="9" name="pg_toast_temp_1">
+    <schema id="22" parent="5" name="pg_toast_temp_1">
       <ObjectId>11849</ObjectId>
       <StateNumber>104</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2022-02-23.20:27:25.153</IntrospectionTimestamp>
     </schema>
-    <schema id="22" parent="9" name="public">
+    <schema id="23" parent="5" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <StateNumber>340</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2022-05-21.15:25:02.115</IntrospectionTimestamp>
-      <IntrospectionStateNumber>932</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2022-05-22.09:23:30.087</IntrospectionTimestamp>
+      <IntrospectionStateNumber>949</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
-    <schema id="23" parent="9" name="springsecurity">
-      <ObjectId>24608</ObjectId>
-      <StateNumber>586</StateNumber>
-      <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2022-02-23.20:27:25.416</IntrospectionTimestamp>
-    </schema>
-    <access-method id="24" parent="9" name="btree">
+    <access-method id="24" parent="5" name="btree">
       <ObjectId>403</ObjectId>
       <Comment>b-tree index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -154,7 +150,7 @@ sequence|table|49970|49972|1
       <HandlerId>330</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="25" parent="9" name="hash">
+    <access-method id="25" parent="5" name="hash">
       <ObjectId>405</ObjectId>
       <Comment>hash index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -162,7 +158,7 @@ sequence|table|49970|49972|1
       <HandlerId>331</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="26" parent="9" name="gist">
+    <access-method id="26" parent="5" name="gist">
       <ObjectId>783</ObjectId>
       <Comment>GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -170,7 +166,7 @@ sequence|table|49970|49972|1
       <HandlerId>332</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="27" parent="9" name="gin">
+    <access-method id="27" parent="5" name="gin">
       <ObjectId>2742</ObjectId>
       <Comment>GIN index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -178,7 +174,7 @@ sequence|table|49970|49972|1
       <HandlerId>333</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="28" parent="9" name="spgist">
+    <access-method id="28" parent="5" name="spgist">
       <ObjectId>4000</ObjectId>
       <Comment>SP-GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -186,7 +182,7 @@ sequence|table|49970|49972|1
       <HandlerId>334</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="29" parent="9" name="brin">
+    <access-method id="29" parent="5" name="brin">
       <ObjectId>3580</ObjectId>
       <Comment>block range index (BRIN) access method</Comment>
       <StateNumber>1</StateNumber>
@@ -194,15 +190,7 @@ sequence|table|49970|49972|1
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <extension id="30" parent="9" name="adminpack">
-      <ObjectId>16384</ObjectId>
-      <Comment>administrative functions for PostgreSQL</Comment>
-      <StateNumber>543</StateNumber>
-      <Version>1.1</Version>
-      <SchemaName>pg_catalog</SchemaName>
-      <SchemaId>11</SchemaId>
-    </extension>
-    <extension id="31" parent="9" name="plpgsql">
+    <extension id="30" parent="5" name="plpgsql">
       <ObjectId>12387</ObjectId>
       <Comment>PL/pgSQL procedural language</Comment>
       <StateNumber>494</StateNumber>
@@ -210,91 +198,285 @@ sequence|table|49970|49972|1
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <sequence id="32" parent="22" name="authors_id_seq">
+    <schema id="31" parent="10" name="information_schema">
+      <ObjectId>12113</ObjectId>
+      <StateNumber>342</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2022-02-23.20:27:23.966</IntrospectionTimestamp>
+      <IntrospectionStateNumber>492</IntrospectionStateNumber>
+    </schema>
+    <schema id="32" parent="10" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>339</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2022-02-23.20:27:24.729</IntrospectionTimestamp>
+      <IntrospectionStateNumber>543</IntrospectionStateNumber>
+    </schema>
+    <schema id="33" parent="10" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+      <StateNumber>104</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2022-02-23.20:27:24.921</IntrospectionTimestamp>
+    </schema>
+    <schema id="34" parent="10" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2022-02-23.20:27:25.044</IntrospectionTimestamp>
+      <IntrospectionStateNumber>433</IntrospectionStateNumber>
+    </schema>
+    <schema id="35" parent="10" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+      <StateNumber>104</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2022-02-23.20:27:25.153</IntrospectionTimestamp>
+    </schema>
+    <schema id="36" parent="10" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>340</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2022-05-22.09:23:30.783</IntrospectionTimestamp>
+      <IntrospectionStateNumber>932</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="37" parent="10" name="springsecurity">
+      <ObjectId>24608</ObjectId>
+      <StateNumber>586</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2022-02-23.20:27:25.416</IntrospectionTimestamp>
+    </schema>
+    <access-method id="38" parent="10" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="39" parent="10" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="40" parent="10" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="41" parent="10" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="42" parent="10" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="43" parent="10" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="44" parent="10" name="adminpack">
+      <ObjectId>16384</ObjectId>
+      <Comment>administrative functions for PostgreSQL</Comment>
+      <StateNumber>543</StateNumber>
+      <Version>1.1</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <extension id="45" parent="10" name="plpgsql">
+      <ObjectId>12387</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>494</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="46" parent="23" name="customers_id_seq">
+      <ObjectId>49997</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>938</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="47" parent="23" name="products_id_seq">
+      <ObjectId>50004</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>940</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="48" parent="23" name="customers">
+      <ObjectId>49999</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>945</StateNumber>
+    </table>
+    <table id="49" parent="23" name="products">
+      <ObjectId>50006</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>940</StateNumber>
+    </table>
+    <sequence id="50" parent="36" name="authors_id_seq">
       <ObjectId>49933</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>893</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="33" parent="22" name="books_id_seq">
+    <sequence id="51" parent="36" name="books_id_seq">
       <ObjectId>49970</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>920</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="34" parent="22" name="catalogs_id_seq">
+    <sequence id="52" parent="36" name="catalogs_id_seq">
       <ObjectId>49906</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>880</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="35" parent="22" name="readers_id_seq">
+    <sequence id="53" parent="36" name="readers_id_seq">
       <ObjectId>49945</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>899</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="36" parent="22" name="subject_id_seq">
+    <sequence id="54" parent="36" name="subject_id_seq">
       <ObjectId>49249</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>668</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
     </sequence>
-    <table id="37" parent="22" name="authors">
+    <table id="55" parent="36" name="authors">
       <ObjectId>49914</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>924</StateNumber>
     </table>
-    <table id="38" parent="22" name="books">
+    <table id="56" parent="36" name="books">
       <ObjectId>49972</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>925</StateNumber>
     </table>
-    <table id="39" parent="22" name="books_readers">
+    <table id="57" parent="36" name="books_readers">
       <ObjectId>49986</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>932</StateNumber>
     </table>
-    <table id="40" parent="22" name="catalogs">
+    <table id="58" parent="36" name="catalogs">
       <ObjectId>49908</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>880</StateNumber>
     </table>
-    <table id="41" parent="22" name="readers">
+    <table id="59" parent="36" name="readers">
       <ObjectId>49947</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>912</StateNumber>
     </table>
-    <table id="42" parent="22" name="subject">
+    <table id="60" parent="36" name="subject">
       <ObjectId>49251</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>668</StateNumber>
     </table>
-    <column id="43" parent="37" name="id">
+    <column id="61" parent="48" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>938</StateNumber>
+      <DefaultExpression>nextval(&apos;customers_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="62" parent="48" name="name">
+      <Position>2</Position>
+      <DataType>varchar(55)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>945</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="63" parent="48" name="customers_id_uindex">
+      <ObjectId>50003</ObjectId>
+      <StateNumber>945</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="64" parent="49" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>940</StateNumber>
+      <DefaultExpression>nextval(&apos;products_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="65" parent="49" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>940</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="66" parent="49" name="cost">
+      <Position>3</Position>
+      <DataType>money|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>940</StateNumber>
+      <TypeId>790</TypeId>
+    </column>
+    <index id="67" parent="49" name="products_id_uindex">
+      <ObjectId>50010</ObjectId>
+      <StateNumber>941</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="68" parent="49" name="products_name_uindex">
+      <ObjectId>50024</ObjectId>
+      <StateNumber>949</StateNumber>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="69" parent="55" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>903</StateNumber>
       <DefaultExpression>nextval(&apos;authors_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="44" parent="37" name="name">
+    <column id="70" parent="55" name="name">
       <Position>2</Position>
       <DataType>varchar(55)|0s</DataType>
       <StateNumber>904</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="45" parent="37" name="authors_id_uindex">
+    <index id="71" parent="55" name="authors_id_uindex">
       <ObjectId>49939</ObjectId>
       <StateNumber>897</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <column id="46" parent="38" name="id">
+    <column id="72" parent="56" name="id">
       <Position>1</Position>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
@@ -302,27 +484,27 @@ sequence|table|49970|49972|1
       <DefaultExpression>nextval(&apos;books_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>21</TypeId>
     </column>
-    <column id="47" parent="38" name="title">
+    <column id="73" parent="56" name="title">
       <Position>2</Position>
       <DataType>varchar(55)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>925</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="48" parent="38" name="author_id">
+    <column id="74" parent="56" name="author_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>923</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="49" parent="38" name="books_id_uindex">
+    <index id="75" parent="56" name="books_id_uindex">
       <ObjectId>49976</ObjectId>
       <StateNumber>925</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <foreign-key id="50" parent="38" name="books_authors_id_fk">
+    <foreign-key id="76" parent="56" name="books_authors_id_fk">
       <ObjectId>49977</ObjectId>
       <StateNumber>924</StateNumber>
       <ColNames>author_id</ColNames>
@@ -331,21 +513,21 @@ sequence|table|49970|49972|1
       <RefTableName>authors</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="51" parent="39" name="reader_id">
+    <column id="77" parent="57" name="reader_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>932</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="52" parent="39" name="book_id">
+    <column id="78" parent="57" name="book_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>932</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="53" parent="40" name="id">
+    <column id="79" parent="58" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -353,26 +535,26 @@ sequence|table|49970|49972|1
       <DefaultExpression>nextval(&apos;catalogs_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="54" parent="40" name="title">
+    <column id="80" parent="58" name="title">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>880</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="55" parent="40" name="catalogs_pk">
+    <index id="81" parent="58" name="catalogs_pk">
       <ObjectId>49912</ObjectId>
       <StateNumber>880</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="56" parent="40" name="catalogs_pk">
+    <key id="82" parent="58" name="catalogs_pk">
       <ObjectId>49913</ObjectId>
       <StateNumber>880</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>catalogs_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="57" parent="41" name="id">
+    <column id="83" parent="59" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -380,20 +562,20 @@ sequence|table|49970|49972|1
       <DefaultExpression>nextval(&apos;readers_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="58" parent="41" name="name">
+    <column id="84" parent="59" name="name">
       <Position>2</Position>
       <DataType>varchar(55)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>912</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="59" parent="41" name="readers_id_uindex">
+    <index id="85" parent="59" name="readers_id_uindex">
       <ObjectId>49951</ObjectId>
       <StateNumber>912</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <column id="60" parent="42" name="id">
+    <column id="86" parent="60" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -401,19 +583,19 @@ sequence|table|49970|49972|1
       <DefaultExpression>nextval(&apos;subject_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="61" parent="42" name="name_subjects">
+    <column id="87" parent="60" name="name_subjects">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <StateNumber>668</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="62" parent="42" name="subject_pkey">
+    <index id="88" parent="60" name="subject_pkey">
       <ObjectId>49255</ObjectId>
       <StateNumber>668</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="63" parent="42" name="subject_pkey">
+    <key id="89" parent="60" name="subject_pkey">
       <ObjectId>49256</ObjectId>
       <StateNumber>668</StateNumber>
       <ColNames>id</ColNames>

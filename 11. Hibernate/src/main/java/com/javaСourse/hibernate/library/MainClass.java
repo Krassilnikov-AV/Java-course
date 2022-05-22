@@ -1,4 +1,4 @@
-package com.javaСourse.hibernate;
+package com.javaСourse.hibernate.library;
 
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;

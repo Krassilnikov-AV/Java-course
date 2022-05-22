@@ -2,7 +2,7 @@
  * Copyright (c) 2022 Tander, All Rights Reserved.
  */
 
-package com.javaСourse.hibernate;
+package com.javaСourse.hibernate.library;
 
 
 import javax.persistence.*;

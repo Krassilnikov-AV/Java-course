@@ -1,4 +1,4 @@
-package com.javaСourse.hibernate;
+package com.javaСourse.hibernate.library;
 
 import org.hibernate.annotations.Cascade;
 
