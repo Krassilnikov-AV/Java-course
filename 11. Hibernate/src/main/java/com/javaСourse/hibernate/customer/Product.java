@@ -1,31 +1,38 @@
 package com.javaСourse.hibernate.customer;
 
 
-import com.javaСourse.hibernate.library.Author;
+import lombok.*;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.util.List;
 
+@Data
 @Entity
 @Table(name = "products")
+@NoArgsConstructor
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private int id;
+	private Long id;
 
 	@Column(name = "name")
 	private String name;
 	@Column(name = "cost")
 	private Double cost;
 
-	@ManyToOne
-	@JoinColumn(name = "author_id")
-	private Author author;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
+	@Cascade(org.hibernate.annotations.CascadeType.ALL)
+	private List<Order> orders;
 
-
-	@JoinTable(
-		name = "books_readers",
-		joinColumns = @JoinColumn(name = "book_id"),
-		inverseJoinColumns = @JoinColumn(name = "reader_id")
-	)
+	@Override
+	public String toString() {
+		return "Product [" +
+			"id = " + id +
+			", name = '" + name + '\'' +
+			", cost = " + cost +
+			", orders = " + orders +
+			']';
+	}
 }

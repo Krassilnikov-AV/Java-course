@@ -4,6 +4,7 @@ package com.javaСourse.hibernate.library;
 import javax.persistence.*;
 import java.io.Serializable;
 
+
 @Entity
 @Table(name = "books_readers")
 public class Review {

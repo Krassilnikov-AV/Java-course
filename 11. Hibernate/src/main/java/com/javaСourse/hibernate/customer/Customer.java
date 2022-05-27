@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "authors")
+@Table(name = "customers")
 @NoArgsConstructor
 public class Customer {
 

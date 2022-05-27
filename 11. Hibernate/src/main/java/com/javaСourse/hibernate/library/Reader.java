@@ -1,9 +1,13 @@
 package com.javaСourse.hibernate.library;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.util.List;
 
+@Data
 @Entity
+@NoArgsConstructor
 @Table(name = "readers")
 public class Reader {
 	@Id
@@ -24,29 +28,6 @@ public class Reader {
 
 	public int getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public List<Book> getBooks() {
-		return books;
-	}
-
-	public void setBooks(List<Book> books) {
-		this.books = books;
-	}
-
-	public Reader() {
 	}
 
 	@Override

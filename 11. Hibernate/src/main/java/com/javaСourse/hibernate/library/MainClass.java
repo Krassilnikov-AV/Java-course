@@ -17,30 +17,32 @@ public class MainClass {
 		Session session = null;
 
 		try {
+//========== занести имя читателя =====================
 //			session = factory.getCurrentSession();
 //			Author author=new Author();
-//			author.setName("Rowling");
+//			author.setName("Евгений");
 //			session.beginTransaction();
 //			session.save(author);
 //			session.getTransaction().commit();
+//			==========================
 // заполнение таблицы books_readers
-
-			session = factory.getCurrentSession();
-			session.beginTransaction();
-			Reader reader = session.get(Reader.class, 1);
-			Book book=session.get(Book.class, 2);
-			reader.getBooks().add(book);
-			session.getTransaction().commit();
-
+//			session = factory.getCurrentSession();
+//			session.beginTransaction();
+//			Reader reader = session.get(Reader.class, 2);
+//			Book book=session.get(Book.class, 2);
+//			reader.getBooks().add(book);
+//			session.getTransaction().commit();
+//===================
 //			CREATE  запрос выполняет ORM
+//=============== занести название каталога ==================
 //			session = factory.getCurrentSession();
 //			Catalog catalog = new Catalog("Fantasy #15");
 //			session.beginTransaction();
 //			session.save(catalog);
 //			session.getTransaction().commit();
-
+//====================================================
 //			READ
-
+//============= чтение списка каталога ================
 //			session = factory.getCurrentSession();
 //			session.beginTransaction();
 //			Catalog catalog2 = session.get(Catalog.class, 2L);
@@ -48,11 +50,11 @@ public class MainClass {
 //			System.out.println(catalog2);
 
 //          UPDATE  обновление выполняет ORM
-
+//=====================
 //			session = factory.getCurrentSession();
 //			session.beginTransaction();
 //			Book bookJava1 = session.get(Book.class, 1L);
-//			bookJava1.getTitle("Java 1 Advenced");
+//			bookJava1.getTitle("potters_1*");
 //			session.getTransaction().commit();
 //			System.out.println(bookJava1);
 

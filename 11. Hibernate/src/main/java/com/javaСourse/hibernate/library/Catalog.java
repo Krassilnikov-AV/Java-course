@@ -5,10 +5,14 @@
 package com.javaСourse.hibernate.library;
 
 
+import lombok.*;
+
 import javax.persistence.*;
 
+@Data
 @Entity // аннотация сущность, говорит о том что объекты данного класса смогут маппиться с БД
-
+// !!! обязательно дефолтный конструктор
+@NoArgsConstructor
 @Table(name = "catalogs") // таблица и ее имя
 public class Catalog {
 
@@ -20,33 +24,13 @@ public class Catalog {
 	@Column(name = "title")
 	private String title;
 
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-// оюязательно дефолтный конструктор
-	public Catalog() {
-	}
-
 	public Catalog(String title) {
 		this.title = title;
 	}
 
 	@Override
 	public String toString() {
-		return "Catalog: " +"id=" + id +", title='" + title + '\'';
+		return "Catalog: " + "id=" + id + ", title='" + title + '\'';
 	}
 
 
