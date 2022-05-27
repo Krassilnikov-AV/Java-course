@@ -3,6 +3,8 @@ package com.javaСourse.hibernate.library;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
+import java.util.Scanner;
+
 
 public class MainClass {
 	public static void main(String[] args) {
@@ -17,10 +19,38 @@ public class MainClass {
 		Session session = null;
 
 		try {
-//========== занести имя читателя =====================
+//========== занести имя чиитателя с консоли =============
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter command: ");
+			while (sc.hasNext()) {
+				String command = sc.nextLine();
+				if (command.equals("exit")) {
+					break;
+				}
+				String[] commandParts = command.split(" ");
+				switch (commandParts[0]) {
+					case ("автор1"):
+						session = factory.getCurrentSession();
+						Author author = new Author();
+						author.setName("Жора Трубецкой");
+						session.beginTransaction();
+						session.save(author);
+						session.getTransaction().commit();
+					case ("автор2"):
+						session = factory.getCurrentSession();
+						Author author2 = new Author();
+						author2.setName("Александр Пушкин");
+						session.beginTransaction();
+						session.save(author2);
+						session.getTransaction().commit();
+
+					default:
+						break;
+				}
+//========== занести имя автора =====================
 //			session = factory.getCurrentSession();
 //			Author author=new Author();
-//			author.setName("Евгений");
+//			author.setName("Михаил Дзержинский");
 //			session.beginTransaction();
 //			session.save(author);
 //			session.getTransaction().commit();
@@ -70,6 +100,7 @@ public class MainClass {
 //			System.out.println(catalog2);
 
 
+			}
 		} finally {
 			factory.close();
 			session.close();

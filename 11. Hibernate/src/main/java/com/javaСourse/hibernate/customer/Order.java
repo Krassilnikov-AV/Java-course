@@ -1,6 +1,5 @@
 package com.javaСourse.hibernate.customer;
 
-
 import lombok.*;
 
 import javax.persistence.*;

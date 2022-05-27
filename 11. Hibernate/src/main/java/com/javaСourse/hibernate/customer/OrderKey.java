@@ -6,6 +6,14 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * EmbeddedId Аннотация
+ * Используется аннотация EmbeddedId к постоянному полю или свойству класс сущности
+ * или сопоставленный суперкласс для обозначения составного первичного ключа,
+ * который является вложенным классом. Встраиваемый класс должен быть аннотирован как Embeddable.
+ * Должен быть только один EmbeddedId аннотации и без аннотации Id, когда используется аннотация
+ * EmbeddedId.
+ */
 @Data
 @Embeddable
 public class OrderKey implements Serializable {
