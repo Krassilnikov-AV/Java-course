@@ -45,15 +45,28 @@ public class MainClassOlder {
 
 //			READ
 //=============== чтение данных из таблиц БД ====================
-			session = factory.getCurrentSession();
-			session.beginTransaction();
-/** получение названия указанного каталога*/
-			Catalog catalog2 = session.get(Catalog.class, 2L);
-			session.getTransaction().commit();
-/** вывод запрошенных данных в консоли*/
-			System.out.println(catalog2);
+//			session = factory.getCurrentSession();
+//			session.beginTransaction();
+///** получение названия указанного каталога*/
+//			Catalog catalog2 = session.get(Catalog.class, 2L);
+//			session.getTransaction().commit();
+///** вывод запрошенных данных в консоли*/
+//			System.out.println(catalog2);
 //================== обновление данных в таблицах БД =====================
 //          UPDATE  обновление выполняет ORM
+//******************* обновление данных каталога *********************
+			session = factory.getCurrentSession();
+			session.beginTransaction();
+/** создаём экземпляр класса Catalog, и в параметре метода get указаваю id каталога, которого необходимо поменять*/
+			Catalog catalog2 = session.get(Catalog.class, 3L);
+/** при помощи метода setTitle указываю новое название выбранного ранее каталога*/
+			catalog2.setTitle("Catalog3 = Fantasy");
+//			session.detach(catalog2); //отвязать объект от контекста
+//			session.remove(catalog2);  // удаление объекта
+//			session.merge(catalog2); // выполнит возврат если не закомичн удаленый объект
+//			session.persist(catalog2);   // добавление объекта к контексту
+			session.getTransaction().commit();
+			System.out.println(catalog2);
 
 //			session = factory.getCurrentSession();
 //			session.beginTransaction();
@@ -61,17 +74,6 @@ public class MainClassOlder {
 //			bookJava1.getTitle("Java 1 Advenced");
 //			session.getTransaction().commit();
 //			System.out.println(bookJava1);
-
-//			session = factory.getCurrentSession();
-//			session.beginTransaction();
-//			Catalog catalog2 = session.get(Catalog.class, 3L);
-//			session.detach(catalog2); //отвязать объект от контекста
-//			session.remove(catalog2);  // удаление объекта
-//			session.merge(catalog2); // выполнит возврат если не закомичн удаленый объект
-//			session.persist(catalog2);   // добавление объекта к контексту
-//			catalog2.setTitle("Fantasy #8");
-//			session.getTransaction().commit();
-//			System.out.println(catalog2);
 
 
 		} finally {

@@ -77,6 +77,17 @@ public class MainClass {
 /** вывод запрошенных данных в консоли*/
 						System.out.println(catalog1);
 					break;
+//          UPDATE  обновление выполняет ORM
+//===================== обновление данных каталога ====================
+					case ("/catalog_update"):
+					session = factory.getCurrentSession();
+					session.beginTransaction();
+					Catalog catalog3 = session.get(Catalog.class, 3L);
+					catalog3.setTitle("Catalog3 = Fantasy3");
+					session.getTransaction().commit();
+					System.out.println(catalog3);
+					break;
+
 					default:
 						break;
 				}
@@ -107,6 +118,7 @@ public class MainClass {
 
 //          UPDATE  обновление выполняет ORM
 //=====================
+
 //			session = factory.getCurrentSession();
 //			session.beginTransaction();
 //			Book bookJava1 = session.get(Book.class, 1L);
