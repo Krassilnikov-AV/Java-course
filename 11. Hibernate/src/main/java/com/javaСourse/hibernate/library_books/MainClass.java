@@ -71,10 +71,8 @@ public class MainClass {
 					case ("catalog1"):
 						session = factory.getCurrentSession();
 						session.beginTransaction();
-/** получение названия указанного каталога*/
 						Catalog catalog1 = session.get(Catalog.class, 2L);
 						session.getTransaction().commit();
-/** вывод запрошенных данных в консоли*/
 						System.out.println(catalog1);
 					break;
 //          UPDATE  обновление выполняет ORM
