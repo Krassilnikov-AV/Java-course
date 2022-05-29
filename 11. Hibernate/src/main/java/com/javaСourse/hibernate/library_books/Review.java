@@ -1,4 +1,4 @@
-package com.javaСourse.hibernate.library;
+package com.javaСourse.hibernate.library_books;
 
 
 import javax.persistence.*;

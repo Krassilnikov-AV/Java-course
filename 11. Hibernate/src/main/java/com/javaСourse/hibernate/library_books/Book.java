@@ -1,11 +1,15 @@
-package com.javaСourse.hibernate.library;
+package com.javaСourse.hibernate.library_books;
+
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
-//синтаксис:
+
 //ALTER TABLE progress_demo
 //  ADD FOREIGN KEY (students_id) REFERENCES students (id) ON DELETE CASCADE;
+@Data
 @Entity
+@NoArgsConstructor
 @Table(name = "books")
 public class Book {
 	@Id
@@ -28,39 +32,12 @@ public class Book {
 	)
 	private List<Reader> readers;
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public Author getAuthor() {
-		return author;
-	}
-
-	public void setAuthor(Author author) {
-		this.author = author;
-	}
-
 	public List<Reader> getReaders() {
 		return readers;
 	}
 
 	public void setReaders(List<Reader> readers) {
 		this.readers = readers;
-	}
-
-	public Book() {
 	}
 
 	public Book(String title) {

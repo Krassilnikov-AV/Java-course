@@ -34,25 +34,34 @@ public class MainClassCustomer {
 					case ("/newCustomer"):
 						session = factory.getCurrentSession();
 						Customer customer = new Customer();
-						customer.setName("Жора Трубецкой");
+						customer.setName("Ляпис Ряпис");
 						session.beginTransaction();
 						session.save(customer);
 						session.getTransaction().commit();
+						break;
 //================== занесение нового прожукта в БД ============
 					case ("/newProduct"):
 						session = factory.getCurrentSession();
 						Product product = new Product();
-						product.setName("спички");
-						product.setCost(5.23);
+						product.setTitle("пельмени");
+						product.setCost(305.23);
 						session.beginTransaction();
 						session.save(product);
 						session.getTransaction().commit();
+						break;
+//================== занесение списка покупок в БД таблица customer_product============
+					case ("/buy"):
+						session=factory.getCurrentSession();
+
+						break;
 //================== /showProductsByPerson - просмотр покупок клиента из БД ============
 					case ("/showProductsByPerson"):
 						session = factory.getCurrentSession();
 						Customer buyCustomer = session.get(Customer.class, 2L);
+//						session
 						Product buyProduct = session.get(Product.class, 1L);
 
+						break;
 					default:
 						break;
 //						System.out.println("/buy");

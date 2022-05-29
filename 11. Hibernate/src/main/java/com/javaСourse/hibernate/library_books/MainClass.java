@@ -1,9 +1,9 @@
-package com.javaСourse.hibernate.library;
+package com.javaСourse.hibernate.library_books;
 
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
-import java.util.Scanner;
+import java.util.*;
 
 
 public class MainClass {
@@ -29,13 +29,15 @@ public class MainClass {
 				}
 				String[] commandParts = command.split(" ");
 				switch (commandParts[0]) {
+//========= занести имя автора с консоли =============
 					case ("автор1"):
 						session = factory.getCurrentSession();
 						Author author = new Author();
-						author.setName("Жора Трубецкой");
+						author.setName("Миха Двинов");
 						session.beginTransaction();
 						session.save(author);
 						session.getTransaction().commit();
+						break;
 					case ("автор2"):
 						session = factory.getCurrentSession();
 						Author author2 = new Author();
@@ -43,7 +45,44 @@ public class MainClass {
 						session.beginTransaction();
 						session.save(author2);
 						session.getTransaction().commit();
+						break;
+//========= занести читателя с прочитанной книгой в БД с консоли =============
+					case ("читатель"):
+						session = factory.getCurrentSession();
+						session.beginTransaction();
+						Reader reader = session.get(Reader.class, 3);
+						Book book = session.get(Book.class, 2);
+						reader.getBooks().add(book);
+						session.getTransaction().commit();
+						break;
+//============= получение какого то количества объектов при помощи HQL ===========
+//					case ("book list"):
+//						session = factory.getCurrentSession();
+//						session.beginTransaction();
+////						List<Book> allBooks = session.createQuery("from Book").getResultList();
+//						List<Book> allBooks = session.createQuery("from Book b where b.title =:title")
+//							.setParameter("title", "Java 1").getResultList();
+//						System.out.println(allBooks);
+//						session.getTransaction().commit();
+//					break;
+//			READ
+//============= чтение данных из БД ================
+					//======== чтение указанного катлога - работает===========
+					case ("catalog1"):
+						session = factory.getCurrentSession();
+						session.beginTransaction();
+/** получение названия указанного каталога*/
+						Catalog catalog1 = session.get(Catalog.class, 2L);
+						session.getTransaction().commit();
 
+/** вывод запрошенных данных в консоли*/
+						System.out.println(catalog1);
+//						session = factory.getCurrentSession();
+//						session.beginTransaction();
+//						Catalog catalog2 = session.get(Catalog.class, 2L);
+//						session.getTransaction().commit();
+//						System.out.println(catalog2);
+					break;
 					default:
 						break;
 				}
@@ -71,13 +110,6 @@ public class MainClass {
 //			session.save(catalog);
 //			session.getTransaction().commit();
 //====================================================
-//			READ
-//============= чтение списка каталога ================
-//			session = factory.getCurrentSession();
-//			session.beginTransaction();
-//			Catalog catalog2 = session.get(Catalog.class, 2L);
-//			session.getTransaction().commit();
-//			System.out.println(catalog2);
 
 //          UPDATE  обновление выполняет ORM
 //=====================

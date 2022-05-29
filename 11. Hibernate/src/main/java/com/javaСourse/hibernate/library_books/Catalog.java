@@ -2,7 +2,7 @@
  * Copyright (c) 2022 Tander, All Rights Reserved.
  */
 
-package com.javaСourse.hibernate.library;
+package com.javaСourse.hibernate.library_books;
 
 
 import lombok.*;
@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Data
 @Entity // аннотация сущность, говорит о том что объекты данного класса смогут маппиться с БД
 // !!! обязательно дефолтный конструктор
-@NoArgsConstructor
+@NoArgsConstructor   // необходимо всегда явно объявлять
 @Table(name = "catalogs") // таблица и ее имя
 public class Catalog {
 

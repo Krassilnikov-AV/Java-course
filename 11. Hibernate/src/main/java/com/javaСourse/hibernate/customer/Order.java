@@ -21,8 +21,8 @@ public class Order {
 	@JoinColumn(name = "product_id", insertable = false, updatable = false)
 	private Product product;
 
-	@Column(name = "price")
-	private Double price;
+//	@Column(name = "price")
+//	private Double price;
 
 	@Override
 	public String toString() {
@@ -30,7 +30,7 @@ public class Order {
 			"orderKey = " + orderKey +
 			", customer = " + customer +
 			", product = " + product +
-			", price = " + price +
+//			", price = " + price +
 			']';
 	}
 }

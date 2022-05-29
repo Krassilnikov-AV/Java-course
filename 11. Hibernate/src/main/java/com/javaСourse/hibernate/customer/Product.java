@@ -4,6 +4,7 @@ package com.javaСourse.hibernate.customer;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -13,23 +14,29 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private Long id;
+	private int id;
 
-	@Column(name = "name")
-	private String name;
+	@Column(name = "title")
+	private String title;
+
 	@Column(name = "cost")
 	private Double cost;
 
-//	@OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
-//	@Cascade(org.hibernate.annotations.CascadeType.ALL)
-//	private List<Order> orders;
+	@ManyToMany
+	@JoinTable(
+		name = "customer_product",
+		joinColumns = @JoinColumn(name = "product_id"),
+		inverseJoinColumns = @JoinColumn(name = "customer_id")
+	)
+	private List<Customer> readers;
 
 	@Override
 	public String toString() {
-		return "Product [" +
-			"id = " + id +
-			", name = '" + name + '\'' +
-			", cost = " + cost  +
-			']';
+		return "Product{" +
+			"id=" + id +
+			", title='" + title + '\'' +
+			", cost=" + cost +
+			", readers=" + readers +
+			'}';
 	}
 }

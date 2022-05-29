@@ -1,4 +1,4 @@
-package com.javaСourse.hibernate.library;
+package com.javaСourse.hibernate.library_books;
 
 import lombok.*;
 
@@ -25,10 +25,6 @@ public class Reader {
 		inverseJoinColumns = @JoinColumn(name = "book_id")
 	)
 	private List<Book> books;
-
-	public int getId() {
-		return id;
-	}
 
 	@Override
 	public String toString() {
