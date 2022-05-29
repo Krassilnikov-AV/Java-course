@@ -74,14 +74,8 @@ public class MainClass {
 /** получение названия указанного каталога*/
 						Catalog catalog1 = session.get(Catalog.class, 2L);
 						session.getTransaction().commit();
-
 /** вывод запрошенных данных в консоли*/
 						System.out.println(catalog1);
-//						session = factory.getCurrentSession();
-//						session.beginTransaction();
-//						Catalog catalog2 = session.get(Catalog.class, 2L);
-//						session.getTransaction().commit();
-//						System.out.println(catalog2);
 					break;
 					default:
 						break;
