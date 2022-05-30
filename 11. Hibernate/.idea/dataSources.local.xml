@@ -8,7 +8,7 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>postgres</user-name>
-      <introspection-schemas>customer:public</introspection-schemas>
+      <introspection-schemas>customer:public|test:public</introspection-schemas>
     </data-source>
     <data-source name="postgres@localhost [2]" uuid="171bedc6-0b9d-4062-84fa-7a18ea6b7b3b">
       <database-info product="PostgreSQL" version="9.6.22" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="9.6.22" exact-driver-version="42.2">

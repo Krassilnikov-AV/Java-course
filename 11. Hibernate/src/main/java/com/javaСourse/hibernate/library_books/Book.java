@@ -46,7 +46,8 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [" + id + " " + title + " " + author.getName() + "]";
+		return "Book id = " + id
+			+ "; Название книги: " + title
+			+ "; Имя автора:  " + author.getName() + ".\n";
 	}
-
 }
