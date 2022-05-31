@@ -90,7 +90,7 @@ public class MainClassOlder {
 			session.beginTransaction();
 			List<Book> allBooks = session.createQuery("from Book").getResultList();
 			System.out.println(allBooks);
-
+			session.getTransaction().commit();
 //			session.merge(catalog2); // выполнит возврат если не закомичн удаленый объект
 //			session.persist(catalog2);   // добавление объекта к контексту
 

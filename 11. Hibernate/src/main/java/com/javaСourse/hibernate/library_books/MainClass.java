@@ -56,15 +56,16 @@ public class MainClass {
 						session.getTransaction().commit();
 						break;
 //============= получение какого то количества объектов при помощи HQL ===========
-//					case ("book list"):
-//						session = factory.getCurrentSession();
-//						session.beginTransaction();
-////						List<Book> allBooks = session.createQuery("from Book").getResultList();
-//						List<Book> allBooks = session.createQuery("from Book b where b.title =:title")
-//							.setParameter("title", "Java 1").getResultList();
-//						System.out.println(allBooks);
-//						session.getTransaction().commit();
-//					break;
+					case ("book list"):
+						session = factory.getCurrentSession();
+						session.beginTransaction();
+//						List<Book> allBooks = session.createQuery("from Book").getResultList();
+						Book booksList = (Book) session
+							.createQuery("from Book b where b.title =:title")
+							.setParameter("title", "potters_1").getSingleResult();
+						session.getTransaction().commit();
+						System.out.println(booksList.toString());
+						break;
 //			READ
 //============= чтение данных из БД ================
 					//======== чтение указанного катлога - работает===========
@@ -74,17 +75,36 @@ public class MainClass {
 						Catalog catalog1 = session.get(Catalog.class, 2L);
 						session.getTransaction().commit();
 						System.out.println(catalog1);
-					break;
+						break;
 //          UPDATE  обновление выполняет ORM
 //===================== обновление данных каталога ====================
 					case ("/catalog_update"):
-					session = factory.getCurrentSession();
-					session.beginTransaction();
-					Catalog catalog3 = session.get(Catalog.class, 3L);
-					catalog3.setTitle("Catalog3 = Fantasy3");
-					session.getTransaction().commit();
-					System.out.println(catalog3);
-					break;
+						session = factory.getCurrentSession();
+						session.beginTransaction();
+						Catalog catalog3 = session.get(Catalog.class, 3L);
+						catalog3.setTitle("Catalog3 = Fantasy3");
+						session.getTransaction().commit();
+						System.out.println(catalog3);
+						break;
+//**************** достать определённое кол-во элементов при помощи HQL запросов
+					case ("/all books"):
+						session = factory.getCurrentSession();
+						session.beginTransaction();
+						List<Book> allBooks = session.createQuery("from Book").getResultList();
+						System.out.println(allBooks);
+						session.getTransaction().commit();
+						break;
+//~~~~~~~~~~~~~~~~~~~~~~ выбрать определённое название книги с автором
+					case ("/title_book_author"):
+						session = factory.getCurrentSession();
+						session.beginTransaction();
+						String queryBook = "from Book b where b.title = :title";
+						List<Book> bookTitleAuthor =
+							session.createQuery(queryBook).setParameter("title", "вишневый сад").getResultList();
+//						for (Book b : bookTitleAuthor)
+						session.getTransaction().commit();
+						System.out.println(bookTitleAuthor);
+						break;
 
 					default:
 						break;

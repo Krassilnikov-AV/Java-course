@@ -3,9 +3,7 @@ package com.javaСourse.hibernate.customer;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
-import java.util.Scanner;
-
-public class MainClassCustomer {
+public class MainNotScanner {
 
 	public static void main(String[] args) {
 		SessionFactory factory = new Configuration()
@@ -19,75 +17,67 @@ public class MainClassCustomer {
 		Session session = null;
 
 		try {
-			Scanner sc = new Scanner(System.in);
-			System.out.println("Enter command: ");
-			while (sc.hasNext()) {
-				String command = sc.nextLine();
-				if (command.equals("exit")) {
-					break;
-				}
-				String[] commandParts = command.split(" ");
+//			Scanner sc = new Scanner(System.in);
+//			System.out.println("Enter command: ");
 
-				switch (commandParts[0]) {
 //================== занесение нового клиента в БД ============
-					case ("/newCustomer"):
-						session = factory.getCurrentSession();
-						Customer customer = new Customer();
-						customer.setName("Ляпис Ряпис");
-						session.beginTransaction();
-						session.save(customer);
-						session.getTransaction().commit();
-						break;
+
+//						session = factory.getCurrentSession();
+//						Customer customer = new Customer();
+//						customer.setName("Ляпис Ряпис");
+//						session.beginTransaction();
+//						session.save(customer);
+//						session.getTransaction().commit();
+
 //================== занесение нового прожукта в БД ============
-					case ("/newProduct"):
-						session = factory.getCurrentSession();
-						Product product = new Product();
-						product.setTitle("пельмени");
-						product.setCost(305.23);
-						session.beginTransaction();
-						session.save(product);
-						session.getTransaction().commit();
-						break;
+//
+//						session = factory.getCurrentSession();
+//						Product product = new Product();
+//						product.setTitle("пельмени");
+//						product.setCost(305.23);
+//						session.beginTransaction();
+//						session.save(product);
+//						session.getTransaction().commit();
+
 //================== занесение списка покупок в БД таблица customer_product============
 //					case ("/buy"):
 //						session = factory.getCurrentSession();
 
 //						break;
 //================== /showProductsByPerson - просмотр покупок клиента из БД ============
-					case ("/buy"):
-						session = factory.getCurrentSession();
-						session.beginTransaction();
 
-						Customer customerBuy = new Customer();
-						session.createQuery("FROM Customer c WHERE c.name =:name")
-							.setParameter("name", commandParts[1]).getSingleResult();
+			session = factory.getCurrentSession();
+			session.beginTransaction();
+
+			Customer customerBuy = new Customer();
+			session.createQuery("FROM Customer c WHERE c.name =:name")
+				.setParameter("name", customerBuy.getName()).getSingleResult();
 //						Customer customerBuy = (Customer) session   //
 //							.createQuery()
 //							.setParameter().getSingleResult();
-						Product productBuy=new Product();
-						session.createQuery("FROM Product p WHERE p.title =:title")
-							.setParameter("title", commandParts[2]).getSingleResult();
-
+			Product productBuy = new Product();
+			session.createQuery("FROM Product p WHERE p.title =:title")
+				.setParameter("title", productBuy.getTitle()).getSingleResult();
+			session.createQuery("FROM Product p WHERE p.coste =:cost")
+				.setParameter("cost", productBuy.getCost()).getSingleResult();
 //						Product productBuy = (Product) session
 //							.createQuery("FROM Product p WHERE p.title =:title")
 //							.setParameter("title", commandParts[2]).getSingleResult();
 
-						OrderKey orderKey = new OrderKey();
-						orderKey.setCustomerId(customerBuy.getId());
-						orderKey.setProductId((long) productBuy.getId());
+			OrderKey orderKey = new OrderKey();
+			orderKey.setCustomerId(customerBuy.getId());
+			orderKey.setProductId((long) productBuy.getId());
 
-						Order order = new Order();
-						order.setOrderKey(orderKey);
-						order.setCost(productBuy.getCost());
+			Order order = new Order();
+			order.setOrderKey(orderKey);
+			order.setCost(productBuy.getCost());
 
-						session.save(order);
-						session.getTransaction().commit();
-						System.out.println("Saved order" + order.toString());
-						System.out.println("Enter new command: ");
-						break;
+			session.save(order);
+			session.getTransaction().commit();
+			System.out.println("Saved order" + order.toString());
+			System.out.println("Enter new command: ");
 
-					default:
-						break;
+
 //						System.out.println("/buy");
 //						session = factory.getCurrentSession();
 //						session.beginTransaction();
@@ -113,10 +103,10 @@ public class MainClassCustomer {
 //						System.out.println("Saved the next order: "+ order.toString());
 //						System.out.println("Enter new command: ");
 //						break;
-				}
-			}
+
 		} finally {
 			factory.close();
+			assert session != null;
 			session.close();
 		}
 	}

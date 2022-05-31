@@ -21,16 +21,16 @@ public class Order {
 	@JoinColumn(name = "product_id", insertable = false, updatable = false)
 	private Product product;
 
-//	@Column(name = "price")
-//	private Double price;
+	@Column(name = "cost")
+	private Double cost;
 
 	@Override
 	public String toString() {
 		return "Order [" +
-			"orderKey = " + orderKey +
-			", customer = " + customer +
-			", product = " + product +
-//			", price = " + price +
+			"orderKey = " + orderKey.getProductId() +
+			", customer = " + customer.getName() +
+			", product = " + product.getTitle() +
+			", cost = " + cost +
 			']';
 	}
 }
