@@ -9,7 +9,7 @@ import java.util.*;
 @Entity
 @Table(name = "customers_1")
 @NoArgsConstructor
-public class Customer {
+public class Customer_1 {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +23,6 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer name: " + name;
+		return "Customer_1 name: " + name;
 	}
 }

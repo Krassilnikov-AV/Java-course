@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b3397b0-eac5-46bf-83df-5d99cf08359e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/MainNotScanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/HibernateSessionFactoryUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/query_customer.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/MainClassCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/MainClassCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/library_books/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/library_books/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/library_books/MainClassOlder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/library_books/MainClassOlder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/MainNotScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/MainNotScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/Customer_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/HibernateSessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/HibernateSessionFactoryUtil.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -134,8 +128,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="225">
+              <caret line="45" column="48" lean-forward="true" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/ProductService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#408#409#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/Customer_1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-53">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -159,7 +178,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/HibernateSessionFactoryUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="59">
-              <caret line="11" column="51" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="51" />
+              <caret line="10" column="51" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,12 +189,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerProduct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+            <state relative-caret-position="85">
+              <caret line="87" column="74" selection-start-line="87" selection-start-column="74" selection-end-line="87" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1035#1036#0" expanded="true" />
                 <element signature="e#1103#1104#0" expanded="true" />
+                <element signature="e#2124#2125#0" expanded="true" />
+                <element signature="e#2200#2201#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -249,9 +270,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/query_customer.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ca7b5699-675d-4e27-bb7f-f364366185c3/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/HibernateSessionFactoryUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerProduct.java" />
       </list>
     </option>
@@ -290,11 +312,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="710" />
-    <option name="y" value="3" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="97" />
     <option name="width" value="1472" />
-    <option name="height" value="693" />
+    <option name="height" value="485" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -538,10 +559,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="446" y="18" width="1177" height="554" extended-state="0" />
+    <frame x="78" y="0" width="1177" height="388" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.28469113" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.31423455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -619,7 +640,8 @@
     <MESSAGE value="refactoring: MainClassOlder" />
     <MESSAGE value="refactoring: MainClass ... обновление данных каталога" />
     <MESSAGE value="refactoring: sql query resurses" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring: sql query resurses" />
+    <MESSAGE value="refactoring: customer_1" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring: customer_1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -664,7 +686,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://171bedc6-0b9d-4062-84fa-7a18ea6b7b3b/database/postgres/schema/public/table/books_readers" />
     <entry file="das://81a2aaec-dfd0-42d8-9e72-27edd02ac2ee/database/customer/schema/public/table/customer_product" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -950,29 +971,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/HibernateSessionFactoryUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <caret line="10" column="51" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -989,14 +988,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/Customer_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="45" column="48" lean-forward="true" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        <state relative-caret-position="85">
+          <caret line="87" column="74" selection-start-line="87" selection-start-column="74" selection-end-line="87" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1035#1036#0" expanded="true" />
             <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#2124#2125#0" expanded="true" />
+            <element signature="e#2200#2201#0" expanded="true" />
           </folding>
         </state>
       </provider>

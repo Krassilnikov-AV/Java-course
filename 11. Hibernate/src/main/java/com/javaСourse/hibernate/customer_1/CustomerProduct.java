@@ -56,7 +56,7 @@ public class CustomerProduct {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@MapsId("customer_id")
-	private Customer customer;
+	private Customer_1 customer;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@MapsId("product_id")
@@ -64,4 +64,37 @@ public class CustomerProduct {
 
 	@Column(name = "product_price", insertable = false, updatable = false)
 	private Double price;
+
+
+	public CustomerProduct(Customer_1 customer, Product product) {
+		this.customer = customer;
+		this.product = product;
+		this.id = new cpID(customer.getId(), product.getId(), (long) product.getPrice());
+		this.price = product.getPrice();
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		CustomerProduct that = (CustomerProduct) o;
+		return Double.compare(that.price, price) == o &&
+			customer.equals(that.customer) &&
+			product.equals(that.product);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(customer.getName(), product.getName(), price);
+	}
+
+	@Override
+	public String toString() {
+		return "CustomerProduct{" +
+			"id=" + id +
+			", customer=" + customer +
+			", product=" + product +
+			", price=" + price +
+			'}';
+	}
 }

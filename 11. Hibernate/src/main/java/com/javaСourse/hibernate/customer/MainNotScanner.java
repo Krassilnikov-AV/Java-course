@@ -23,7 +23,7 @@ public class MainNotScanner {
 //================== занесение нового клиента в БД ============
 
 //						session = factory.getCurrentSession();
-//						Customer customer = new Customer();
+//						Customer_1 customer = new Customer_1();
 //						customer.setName("Ляпис Ряпис");
 //						session.beginTransaction();
 //						session.save(customer);
@@ -52,7 +52,7 @@ public class MainNotScanner {
 			Customer customerBuy = new Customer();
 			session.createQuery("FROM Customer c WHERE c.name =:name")
 				.setParameter("name", customerBuy.getName()).getSingleResult();
-//						Customer customerBuy = (Customer) session   //
+//						Customer_1 customerBuy = (Customer_1) session   //
 //							.createQuery()
 //							.setParameter().getSingleResult();
 			Product productBuy = new Product();
@@ -82,7 +82,7 @@ public class MainNotScanner {
 //						session = factory.getCurrentSession();
 //						session.beginTransaction();
 //
-//						Customer customer = (Customer) session
+//						Customer_1 customer = (Customer_1) session
 //						.createQuery("FROM customers c WHERE c.name = :name")
 //						.setParameter("name", commandParts[1]).getSingleResult();
 //						Product product = (Product) session
