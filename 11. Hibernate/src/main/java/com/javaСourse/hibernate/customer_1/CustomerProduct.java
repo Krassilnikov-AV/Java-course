@@ -6,7 +6,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
-
 @Data
 @Entity
 @Table(name = "customer_product_1")
@@ -65,7 +64,6 @@ public class CustomerProduct {
 	@Column(name = "product_price", insertable = false, updatable = false)
 	private Double price;
 
-
 	public CustomerProduct(Customer_1 customer, Product product) {
 		this.customer = customer;
 		this.product = product;
@@ -78,7 +76,7 @@ public class CustomerProduct {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		CustomerProduct that = (CustomerProduct) o;
-		return Double.compare(that.price, price) == o &&
+		return
 			customer.equals(that.customer) &&
 			product.equals(that.product);
 	}
@@ -90,11 +88,6 @@ public class CustomerProduct {
 
 	@Override
 	public String toString() {
-		return "CustomerProduct{" +
-			"id=" + id +
-			", customer=" + customer +
-			", product=" + product +
-			", price=" + price +
-			'}';
+		return ("Customer " +customer.getName() + " buy " + product.getName() + " for "+ price);
 	}
 }

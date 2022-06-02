@@ -5,20 +5,20 @@ import org.hibernate.*;
 
 import javax.persistence.NoResultException;
 
-public class CustomerDAO {
+public class ProductDAO {
 
-	private SessionFactory sessionFactory = HibernateSessionFactoryUtil
-		.sessionFactoryUtil;
+	private SessionFactory sessionFactory=HibernateSessionFactoryUtil.sessionFactory;
 
-	public Customer_1 findByName(String name) throws NoResultException {
+	public Product findByName(String name) throws NoResultException {
 		try (Session currentSession = sessionFactory.openSession()) {
-			String query = "FROM Customer_1 c WHERE c.name = :name";
-			return (Customer_1) currentSession.createQuery(query).setParameter("name", name)
+			String query = "FROM Product p WHERE p.name = :name";
+			return (Product) currentSession.createQuery(query).setParameter("name", name)
 				.getSingleResult();
 		}
 	}
 
-	public void save(Customer_1 entity) {
+
+	public void save(Product entity) {
 		try (Session currentSession = sessionFactory.openSession()) {
 			Transaction transaction = currentSession.beginTransaction();
 			currentSession.save(entity);
@@ -26,16 +26,16 @@ public class CustomerDAO {
 		}
 	}
 
-	public Customer_1 findByID(Long id) {
+	public Product findByID(Long id) {
 		try (Session currentSession = sessionFactory.openSession()) {
 			Transaction transaction = currentSession.beginTransaction();
-			Customer_1 entity =currentSession.get(Customer_1.class, id);
+			Product entity =currentSession.get(Product.class, id);
 			transaction.commit();
 			return entity;
 		}
 	}
 
-	public void update(Customer_1 product) {
+	public void update(Product product) {
 		try (Session currentSession = sessionFactory.openSession()) {
 			Transaction transaction = currentSession.beginTransaction();
 			currentSession.update(product);

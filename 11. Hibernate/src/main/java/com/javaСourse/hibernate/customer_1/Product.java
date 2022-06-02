@@ -7,7 +7,7 @@ import java.util.*;
 
 @Data
 @Entity
-@Table(name = "products")
+@Table(name = "products_1")
 @NoArgsConstructor
 public class Product {
 

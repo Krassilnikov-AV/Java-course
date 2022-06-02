@@ -1,18 +1,27 @@
 package com.javaСourse.hibernate.customer_1;
 
-import com.javaСourse.hibernate.customer.Customer;
-
-import javax.persistence.NoResultException;
 
 public class ProductService {
 
-	private CustomerDAO customerDAO = new CustomerDAO();
+	private ProductDAO productDAO = new ProductDAO();
 
-	public Customer findByName(String name) throws NoResultException {
-		return customerDAO.findByName(name);
+	public void buyProduct(Customer_1 customer_1, Product product) {
+		productDAO.buyProduct(customer_1, product);
 	}
 
-	public void save(Customer_1 entity) {
-		CustomerDAO.save(entity);
+	public Product findByName(String name) {
+		return productDAO.findByName(name);
+	}
+
+	public void save(Product entity) {
+		productDAO.save(entity);
+	}
+
+	public Product findByID(Long id) {
+		return productDAO.findByID(id);
+	}
+
+	public void update(Product product){
+		productDAO.update(product);
 	}
 }
