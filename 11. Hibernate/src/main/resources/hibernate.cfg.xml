@@ -6,9 +6,10 @@
 	<session-factory>
 		<property name="connection.driver_class">org.postgresql.Driver</property>
 		<!--<property name="connection.url">jdbc:mysql://localhost:3306/geek_library?allowPublicKeyRetrieval=true&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</property>-->
+		<!--<property name="connection.url">jdbc:postgresql://localhost:5432/one_to_many_exemple</property>-->
 		<property name="connection.url">jdbc:postgresql://localhost:5432/customer</property>
 		<property name="connection.username">postgres</property>
-		<property name="connection.password">alex159</property>
+		<property name="connection.password">*****</property>
 
 		<property name="connection.pool_size">1</property>
 
@@ -19,5 +20,7 @@
 		<property name="current_session_context_class">thread</property>
 
 		<!--<property name="hibernate.hbm2ddl.auto">none</property>-->
+		<!--<mapping resource="ru/javavision/model/Car.hbm.xml" />-->
+		<!--<mapping resource="ru/javavision/model/Engine.hbm.xml" />-->
 	</session-factory>
 </hibernate-configuration>
