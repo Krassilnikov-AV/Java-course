@@ -12,7 +12,7 @@ public class HibernateSessionFactoryUtil {
 
 	public static final SessionFactory getSessionFactory() {
 		try {
-			Configuration configuration = new Configuration().configure();
+			Configuration configuration = new Configuration().configure("hibernate.cfg.xml");
 			configuration.addAnnotatedClass(Customer_1.class);
 			configuration.addAnnotatedClass(Product.class);
 			configuration.addAnnotatedClass(CustomerProduct.class);

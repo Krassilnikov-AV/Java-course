@@ -1,7 +1,7 @@
-package com.javaСourse.hibernate.oneToMany;
+package com.javaСourse.hibernate.oneToMany_xml;
 
-import com.javaСourse.hibernate.oneToMany.dao.*;
-import com.javaСourse.hibernate.oneToMany.model.Engine;
+import com.javaСourse.hibernate.oneToMany_xml.dao.*;
+import com.javaСourse.hibernate.oneToMany_xml.model.Engine;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 

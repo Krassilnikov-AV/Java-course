@@ -1,6 +1,6 @@
-package com.javaСourse.hibernate.oneToMany.dao;
+package com.javaСourse.hibernate.oneToMany_xml.dao;
 
-import com.javaСourse.hibernate.oneToMany.model.Engine;
+import com.javaСourse.hibernate.oneToMany_xml.model.Engine;
 import com.sun.istack.internal.NotNull;
 import org.hibernate.*;
 

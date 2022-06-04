@@ -4,7 +4,7 @@
 		"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibermate-maping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
-<class name="com.javaСourse.hibernate.oneToMany.model.Engine" table="engines">
+<class name="com.javaСourse.hibernate.oneToMany_xml.model.Engine" table="engines">
 	<id name="id" type="int" column="id">
 		<generator class="identity"/>
 	</id>
@@ -18,7 +18,7 @@
 		2. property-ref="carMarks" - это имя переменной на полях класса Engine
 		-->
 		<key column="mark" property-ref="carMark"/>
-		<one-to-many class="com.javaСourse.hibernate.oneToMany.model.Car"/>
+		<one-to-many class="com.javaСourse.hibernate.oneToMany_xml.model.Car"/>
 	</set>
 </class>
 </hibermate-maping>

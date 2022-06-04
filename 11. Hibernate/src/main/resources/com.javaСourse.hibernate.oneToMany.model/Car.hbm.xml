@@ -4,7 +4,7 @@
 		"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibermate-maping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
-	<class name="com.javaСourse.hibernate.oneToMany.model.Car" table="cars">
+	<class name="com.javaСourse.hibernate.oneToMany_xml.model.Car" table="cars">
 		<id name="id" type="int" column="id">
 			<generator class="identity"/>
 		</id>

@@ -1,4 +1,4 @@
-package com.javaСourse.hibernate.oneToMany.dao;
+package com.javaСourse.hibernate.oneToMany_xml.dao;
 
 public interface DAO<Entity, Key> {
 	void create(Entity entity);

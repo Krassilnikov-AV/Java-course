@@ -1,4 +1,4 @@
-package com.javaСourse.hibernate.oneToMany.model;
+package com.javaСourse.hibernate.oneToMany_xml.model;
 
 import lombok.*;
 

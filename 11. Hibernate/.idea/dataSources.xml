@@ -7,23 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/customer</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="postgres@localhost [2]" uuid="171bedc6-0b9d-4062-84fa-7a18ea6b7b3b">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
-    </data-source>
     <data-source source="LOCAL" name="customer@localhost" uuid="97234101-9bcf-4fe1-89d1-635060d35acd">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/customer</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="postgres@localhost [3]" uuid="ca7b5699-675d-4e27-bb7f-f364366185c3">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="8870d755-db2b-4cc0-8b41-79bf454550d4">
       <driver-ref>postgresql</driver-ref>
