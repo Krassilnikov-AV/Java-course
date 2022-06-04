@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="customer@localhost [2]" uuid="81a2aaec-dfd0-42d8-9e72-27edd02ac2ee">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/customer</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="customer@localhost" uuid="97234101-9bcf-4fe1-89d1-635060d35acd">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/customer</jdbc-url>
-    </data-source>
     <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="8870d755-db2b-4cc0-8b41-79bf454550d4">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
@@ -21,9 +9,9 @@
 
 D:/REPOSITORIES-2/Java-course/11. Hibernate/src/main/resources/hibernate.cfg.xml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/customer</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="postgres@localhost" uuid="97240a69-d2da-456a-b333-a72c3034f528">
+    <data-source source="LOCAL" name="postgres@localhost" uuid="ab64e63a-8d4b-4934-8266-cd7361847648">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

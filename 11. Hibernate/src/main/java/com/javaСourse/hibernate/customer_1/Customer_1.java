@@ -19,7 +19,7 @@ public class Customer_1 {
 	private String name;
 
 	@OneToMany(mappedBy = "customer", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	private Set<CustomerProduct> products = new HashSet<>();
+	private Set<CustomerProduct> products = new HashSet();
 
 	@Override
 	public String toString() {

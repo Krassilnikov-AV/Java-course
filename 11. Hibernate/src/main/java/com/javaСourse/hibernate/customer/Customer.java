@@ -20,7 +20,7 @@ package com.javaСourse.hibernate.customer;
 //
 //	@ManyToMany
 //	@JoinTable(
-//		name = "customer_product_1",
+//		name = "customer_product",
 //		joinColumns = @JoinColumn(name = "customer_id"),
 //		inverseJoinColumns = @JoinColumn(name = "product_id")
 //	)

@@ -9,15 +9,18 @@
 		<!--<property name="connection.url">jdbc:postgresql://localhost:5432/one_to_many_exemple</property>-->
 		<property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>
 		<property name="connection.username">postgres</property>
-		<property name="connection.password">*****</property>
-
+		<property name="connection.password">alex159</property>
 		<property name="connection.pool_size">1</property>
-
 		<property name="dialect">org.hibernate.dialect.PostgreSQL94Dialect</property>
-
 		<property name="show_sql">true</property>
-
 		<property name="current_session_context_class">thread</property>
+
+		<property name="hibernate.hbm2ddl.auto">create</property>
+
+		<mapping class="com.javaСourse.hibernate.advencied.Product"/>
+		<mapping class="com.javaСourse.hibernate.advencied.Customer"/>
+		<mapping class="com.javaСourse.hibernate.advencied.Manufacturer"/>
+		<mapping class="com.javaСourse.hibernate.advencied.BigItem"/>
 
 		<!--<property name="hibernate.hbm2ddl.auto">none</property>-->
 		<!--<mapping resource="ru/javavision/model/Car.hbm.xml" />-->

@@ -1,40 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="customer@localhost [2]" uuid="81a2aaec-dfd0-42d8-9e72-27edd02ac2ee">
-      <database-info product="PostgreSQL" version="9.6.22" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="9.6.22" exact-driver-version="42.2">
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>postgres</user-name>
-      <introspection-schemas>postgres:public|test:public</introspection-schemas>
-    </data-source>
-    <data-source name="customer@localhost" uuid="97234101-9bcf-4fe1-89d1-635060d35acd">
-      <database-info product="PostgreSQL" version="9.6.22" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="9.6.22" exact-driver-version="42.2">
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>postgres</user-name>
-      <introspection-schemas>@:@|postgres:</introspection-schemas>
-    </data-source>
     <data-source name="hibernate.cfg.xml/Hibernate" uuid="8870d755-db2b-4cc0-8b41-79bf454550d4">
       <database-info product="PostgreSQL" version="9.6.22" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="9.6.22" exact-driver-version="42.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <user-name>postgres</user-name>
-      <introspection-schemas>@:@</introspection-schemas>
+      <introspection-schemas>@:@|postgres:public</introspection-schemas>
     </data-source>
-    <data-source name="postgres@localhost" uuid="97240a69-d2da-456a-b333-a72c3034f528">
+    <data-source name="postgres@localhost" uuid="ab64e63a-8d4b-4934-8266-cd7361847648">
       <database-info product="PostgreSQL" version="9.6.22" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="9.6.22" exact-driver-version="42.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>postgres</user-name>
-      <introspection-schemas>customer:</introspection-schemas>
+      <introspection-schemas>@:@|postgres:public</introspection-schemas>
     </data-source>
   </component>
 </project>
