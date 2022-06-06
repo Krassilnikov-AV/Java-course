@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b3397b0-eac5-46bf-83df-5d99cf08359e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/drop-and-create.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/BigItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/MainClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/Manufacturer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/ValidBeanEx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/VeryAnnotatedClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81a2aaec-dfd0-42d8-9e72-27edd02ac2ee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81a2aaec-dfd0-42d8-9e72-27edd02ac2ee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81a2aaec-dfd0-42d8-9e72-27edd02ac2ee.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/Customer_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/Customer_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -90,8 +75,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            <state relative-caret-position="301">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="21" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,8 +99,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/BigItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="266">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/MainClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,13 +121,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/MainClass.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-228">
-              <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-570">
+              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -141,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/person.hbm.xml" />
         <option value="D:/LEARNING/VIDEO_COURE/GeekBrains ВТБ (Java для молодых специалистов Банка ВТБ(ПАО))/Лекция 11/hibernate-ex/src/main/java/com/geekbrains/hibernate/MainClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/library_books/Book.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/library_books/MainClassOlder.java" />
@@ -185,13 +193,14 @@
         <option value="$PROJECT_DIR$/drop-and-create.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ab64e63a-8d4b-4934-8266-cd7361847648/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/da55a687-00ff-4ebe-99cd-f91c3b554bc5/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/Product.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/VeryAnnotatedClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/Customer_1.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/MainClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/BigItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/Customer.java" />
       </list>
     </option>
   </component>
@@ -229,11 +238,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="72" />
-    <option name="y" value="67" />
-    <option name="width" value="1433" />
-    <option name="height" value="723" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="71" />
+    <option name="y" value="66" />
+    <option name="width" value="1434" />
+    <option name="height" value="724" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -241,6 +250,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -272,30 +282,12 @@
               <item name="11. Hibernate" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="11. Hibernate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="11. Hibernate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
-              <item name="advencied" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="11. Hibernate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="11. Hibernate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -438,16 +430,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="264" y="68" width="1146" height="578" extended-state="0" />
+    <frame x="-7" y="-7" width="1294" height="694" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30662984" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.46191248" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Persistence" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.3283859" />
-      <window_info anchor="bottom" id="Hibernate Console" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3277592" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.39888683" />
@@ -463,14 +453,16 @@
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.33395177" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3283859" />
-      <window_info anchor="right" id="CDI" weight="0.3298217" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.3283859" />
+      <window_info anchor="bottom" id="Hibernate Console" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.28200972" />
+      <window_info anchor="right" id="Database" order="4" weight="0.28176796" />
       <window_info anchor="right" id="Maven" order="5" weight="0.34278768" />
+      <window_info anchor="right" id="CDI" order="6" weight="0.3298217" />
+      <window_info anchor="right" id="Bean Validation" order="7" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3071313" />
@@ -531,7 +523,8 @@
     <MESSAGE value="refactoring: customer_1 MainApp" />
     <MESSAGE value="refactoring: oneToMany_xml" />
     <MESSAGE value="refactoring: oneToOne" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring: oneToOne" />
+    <MESSAGE value="refactoring: advencied" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring: advencied" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -652,20 +645,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://81a2aaec-dfd0-42d8-9e72-27edd02ac2ee/database/postgres/schema/public/table/customer_product_1">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://81a2aaec-dfd0-42d8-9e72-27edd02ac2ee/database/postgres/schema/public/table/products_1">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://81a2aaec-dfd0-42d8-9e72-27edd02ac2ee/database/postgres/schema/public/table/customer_product_1" />
+    <entry file="das://81a2aaec-dfd0-42d8-9e72-27edd02ac2ee/database/postgres/schema/public/table/products_1" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer/MainNotScanner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1216">
@@ -708,13 +689,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://81a2aaec-dfd0-42d8-9e72-27edd02ac2ee/database/postgres/schema/public/table/customers_1">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://81a2aaec-dfd0-42d8-9e72-27edd02ac2ee/database/postgres/schema/public/table/customers_1" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/customer_1/CustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -805,13 +780,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://ab64e63a-8d4b-4934-8266-cd7361847648/database/postgres/schema/public/table/customers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://ab64e63a-8d4b-4934-8266-cd7361847648/database/postgres/schema/public/table/customers" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/query_customer.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -854,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://8870d755-db2b-4cc0-8b41-79bf454550d4/database/postgres/schema/public/table/customers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://8870d755-db2b-4cc0-8b41-79bf454550d4/database/postgres/schema/public/table/big_items">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -872,13 +834,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="19" column="22" selection-start-line="10" selection-start-column="12" selection-end-line="19" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -946,27 +901,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/Product.java">
+    <entry file="das://8870d755-db2b-4cc0-8b41-79bf454550d4/database/postgres/schema/public/table/customers">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="301">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/Customer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        <state relative-caret-position="285">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/BigItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -975,11 +940,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaСourse/hibernate/advencied/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-228">
-          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-570">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
