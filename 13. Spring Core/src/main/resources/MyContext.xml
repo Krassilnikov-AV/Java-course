@@ -6,16 +6,28 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
+	<!--объявление бина simpleBean-->
+	<bean id="simpleBean" class="com.Java_course.spring.core.current.SimpleBean" scope="prototype"/>
 
-	<bean id="simpleBean" class="com.Java_course.spring.core.current.SimpleBean"/>
 	<bean id="animalsClassNameGenerator" class="com.Java_course.spring.core.current.AnimalsClassNameGenerator"/>
+
+	<bean id="shapesClassNameGenerator" class="com.Java_course.spring.core.current.ShapesClassNameGenerator"/>
+
 	<bean id="javaCodeCreator" class="com.Java_course.spring.core.current.JavaCodeCreator">
 		<property name="classNameGenerator">
-			<ref bean="animalsClassNameGenerator" />
+			<!--нужно получить рандомных животных ч/з сеттер по java коду-->
+			<!--ref - для того чтобы сослаться на другой бин
+			    value - для того что бы положить что то поумолчанию -->
+			<ref bean="animalsClassNameGenerator"/>
 		</property>
 	</bean>
-
-	<!--<bean id="cppCodeCreator" class="com.geekbrains.spring.current.CppCodeCreator">-->
-		<!--<constructor-arg ref="shapesClassNameGenerator" />-->
+	<!--указание id и пути к классу нахождения ч/з конструктор по C++-->
+	<!--<bean id="cppCodeCreator" class="com.Java_course.spring.core.current.CppCodeCreator">-->
+	<!--<constructor-arg ref="animalsClassNameGenerator"/>-->
 	<!--</bean>-->
+	<!--или можно получить аналогчно пример рандомной фигуры-->
+	<bean id="cppCodeCreator1" class="com.Java_course.spring.core.current.CppCodeCreator">
+		<constructor-arg ref="shapesClassNameGenerator"/>
+	</bean>
+
 </beans>

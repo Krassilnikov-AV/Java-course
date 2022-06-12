@@ -1,5 +1,9 @@
 package com.Java_course.spring.core.current;
 
+
+import lombok.Data;
+
+@Data
 public class SimpleBean {
 	private int value;
 
