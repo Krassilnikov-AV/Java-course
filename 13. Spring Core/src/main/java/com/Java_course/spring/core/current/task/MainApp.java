@@ -1,5 +1,7 @@
 package com.Java_course.spring.core.current.task;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 /**
  * 1. Создайте класс Product (id, title, cost);
  * 2. Создайте  компонент  ProductService,  который  хранит  в  себе  List<Product>,  допустим  с  10
@@ -21,6 +23,17 @@ package com.Java_course.spring.core.current.task;
 public class MainApp {
 
 	public static void main(String[] args) {
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+		ProductService productService = context.getBean("productService", ProductService.class);
+		Cart cart = context.getBean("cart", Cart.class);
+		OrderService orderService = context.getBean("orderService", OrderService.class);
 
+		cart.add(productService.findByTitle("product #1"));
+		cart.add(productService.findByTitle("product #2"));
+		cart.add(productService.findByTitle("product #3"));
+
+		orderService.createOrderFromCurrentCart();
+
+		context.close();
 	}
 }
