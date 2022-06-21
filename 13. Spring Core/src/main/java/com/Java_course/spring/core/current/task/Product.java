@@ -6,7 +6,7 @@ import lombok.*;
  * Класс Product
  * 1. Создайте класс Product (id, title, cost);
  */
-//
+
 //@Component
 ///** @Component сказала спрингу, что класс, который ей аннотируем, это бин.*/
 @Data
