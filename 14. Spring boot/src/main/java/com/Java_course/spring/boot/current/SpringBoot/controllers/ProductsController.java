@@ -11,6 +11,7 @@ public class ProductsController {
     public String method1() {
         return "1";
     }
+//    http://localhost:8189/Spring-Boot/products/add
 
     @GetMapping("/remove/{id}")
     public String method2() {
