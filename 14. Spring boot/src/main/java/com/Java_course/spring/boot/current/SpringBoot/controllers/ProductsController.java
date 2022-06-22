@@ -26,7 +26,9 @@ public class ProductsController {
 	public void setProductsService(ProductsService productsService) {
 		this.productsService = productsService;
 	}
-
+/**
+ * -создаётся пустой объект, далее запрос у сервиса всех имеющихся продуктов.
+ * -дале созданный экземпляр добавляем в параметр модель и показыаем страницу products*/
 	@GetMapping
 	public String showProductsList(Model model) {
 		Product product=new Product();
