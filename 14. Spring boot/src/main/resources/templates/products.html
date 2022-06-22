@@ -28,13 +28,15 @@
 			<td th:text="${product.id}"/>
 			<td th:text="${product.title}"/>
 			<td th:text="${product.price}"/>
-			<td>
-			<a th:text="Просмотреть"/>
-			</td>
-
 			<!--<td>-->
-			<!--<a th:href="@{'/products/show/' + ${product.id}}" th:text="Просмотреть"/>-->
+			<!--<a th:text="Просмотреть"/>-->
 			<!--</td>-->
+<!--смотреть данные о товаре на отдельной странице-->
+			<!--@{} - относительно корня-->
+			<td>
+			<!--/*@thymesVar id="id" type="ch"*/-->
+			<a th:href="@{'/products/show/' + ${product.id}}" th:text="Просмотреть"/>
+			</td>
 		</tr>
 		</tbody>
 	</table>
