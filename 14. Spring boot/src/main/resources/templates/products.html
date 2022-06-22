@@ -18,7 +18,7 @@
 			<th>ID</th>
 			<th>Название товара</th>
 			<th>Цена</th>
-			<!--<th>Действия</th>-->
+			<th>Действия</th>
 		</tr>
 		</thead>
 		<tbody>
@@ -28,6 +28,10 @@
 			<td th:text="${product.id}"/>
 			<td th:text="${product.title}"/>
 			<td th:text="${product.price}"/>
+			<td>
+			<a th:text="Просмотреть"/>
+			</td>
+
 			<!--<td>-->
 			<!--<a th:href="@{'/products/show/' + ${product.id}}" th:text="Просмотреть"/>-->
 			<!--</td>-->

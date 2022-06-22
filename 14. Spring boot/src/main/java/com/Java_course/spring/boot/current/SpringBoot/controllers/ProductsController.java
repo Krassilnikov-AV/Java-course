@@ -42,4 +42,11 @@ public class ProductsController {
 		productsService.add(product);
 		return "redirect:/products";
 	}
+
+	@GetMapping("/show")
+    public String showOneProduct(Model model) {
+        Product product = new Product(10L, "CCC+++", 1000);
+        model.addAttribute("product", product);
+        return "product-page";
+    }
 }
