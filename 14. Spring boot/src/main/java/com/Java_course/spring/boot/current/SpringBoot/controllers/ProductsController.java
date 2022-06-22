@@ -1,5 +1,6 @@
 package com.Java_course.spring.boot.current.SpringBoot.controllers;
 
+import com.Java_course.spring.boot.current.SpringBoot.entities.Product;
 import com.Java_course.spring.boot.current.SpringBoot.services.ProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,7 +29,15 @@ public class ProductsController {
 
 	@GetMapping
 	public String showProductsList(Model model) {
+		Product product=new Product();
 		model.addAttribute("products", productsService.getAllProducts());
+		model.addAttribute("product", product);
 		return "products";
+	}
+//	добавление
+	@PostMapping("/add")
+	public String addProduct(@ModelAttribute(value = "product") Product product) {
+		productsService.add(product);
+		return "redirect:/products";
 	}
 }
