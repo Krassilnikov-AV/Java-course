@@ -43,9 +43,11 @@ public class ProductsController {
 		return "redirect:/products";
 	}
 
-	@GetMapping("/show")
-    public String showOneProduct(Model model) {
-        Product product = new Product(10L, "CCC+++", 1000);
+	@GetMapping("/show/{id}")
+    public String showOneProduct(Model model,  @PathVariable(value = "id") Long id) {
+//        Product product = new Product(10L, "CCC+++", 1000);
+//        запрос продукта у сервиса
+		Product product = productsService.getById(id);
         model.addAttribute("product", product);
         return "product-page";
     }

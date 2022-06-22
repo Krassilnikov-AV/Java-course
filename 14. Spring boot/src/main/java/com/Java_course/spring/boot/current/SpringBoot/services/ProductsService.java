@@ -30,4 +30,8 @@ public class ProductsService {
 	public void add(Product product) {
 		productRepository.save(product);
 	}
+
+	public Product getById(Long id) {
+		return productRepository.findById(id);
+	}
 }
