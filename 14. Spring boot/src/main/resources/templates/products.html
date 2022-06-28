@@ -31,11 +31,13 @@
 			<!--<td>-->
 			<!--<a th:text="Просмотреть"/>-->
 			<!--</td>-->
-<!--смотреть данные о товаре на отдельной странице-->
+			<!--смотреть данные о товаре на отдельной странице-->
 			<!--@{} - относительно корня-->
 			<td>
-			<!--/*@thymesVar id="id" type="ch"*/-->
-			<a th:href="@{'/products/show/' + ${product.id}}" th:text="Просмотреть"/>
+				<!--/*@thymesVar id="id" type="ch"*/-->
+				<a th:href="@{'/products/show/' + ${product.id}}" th:text="Просмотреть"/>
+				<!--генерация ссылки на удаление товара-->
+				<a th:href="@{'/products/delete/' + ${product.id}}" th:text="Удалить"/>
 			</td>
 		</tr>
 		</tbody>

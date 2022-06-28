@@ -26,17 +26,20 @@ public class ProductsController {
 	public void setProductsService(ProductsService productsService) {
 		this.productsService = productsService;
 	}
-/**
- * -создаётся пустой объект, далее запрос у сервиса всех имеющихся продуктов.
- * -дале созданный экземпляр добавляем в параметр модель и показыаем страницу products*/
+
+	/**
+	 * -создаётся пустой объект, далее запрос у сервиса всех имеющихся продуктов.
+	 * -дале созданный экземпляр добавляем в параметр модель и показыаем страницу products
+	 */
 	@GetMapping
 	public String showProductsList(Model model) {
-		Product product=new Product();
+		Product product = new Product();
 		model.addAttribute("products", productsService.getAllProducts());
 		model.addAttribute("product", product);
 		return "products";
 	}
-//	добавление
+
+	//	добавление
 	@PostMapping("/add")
 	public String addProduct(@ModelAttribute(value = "product") Product product) {
 		productsService.add(product);
@@ -44,11 +47,20 @@ public class ProductsController {
 	}
 
 	@GetMapping("/show/{id}")
-    public String showOneProduct(Model model,  @PathVariable(value = "id") Long id) {
+	public String showOneProduct(Model model, @PathVariable(value = "id") Long id) {
 //        Product product = new Product(10L, "CCC+++", 1000);
 //        запрос продукта у сервиса
 		Product product = productsService.getById(id);
-        model.addAttribute("product", product);
-        return "product-page";
-    }
+		model.addAttribute("product", product);
+		return "product-page";
+	}
+
+	/**
+	 * - redirect: - посылаете запрос на страницу /products
+	 */
+	@GetMapping("/delete/{id}")
+	public String deleteById(@PathVariable(value = "id") Long id) {
+		productsService.deleteById(id);
+		return "redirect:/products";
+	}
 }
