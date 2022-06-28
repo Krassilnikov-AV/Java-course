@@ -39,8 +39,22 @@ public class ProductsController {
 		return "products";
 	}
 
+	@GetMapping("/add")
+	public String showAddProductFrom(Model model) {
+		Product product = new Product();
+		model.addAttribute("product", product);
+		return "product-edit";
+	}
+
+	@GetMapping("/edit/{id}")
+	public String showEditProductFrom(Model model, @PathVariable(value = "id") Long id) {
+		Product product = productsService.getById(id);
+		model.addAttribute("product", product);
+		return "product-edit";
+	}
+
 	//	добавление
-	@PostMapping("/add")
+	@PostMapping("/edit")
 	public String addProduct(@ModelAttribute(value = "product") Product product) {
 		productsService.add(product);
 		return "redirect:/products";
