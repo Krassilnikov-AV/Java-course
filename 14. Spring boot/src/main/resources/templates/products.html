@@ -10,7 +10,18 @@
 
 <body>
 <div class="container">
-	<!--создание таблицы-->
+	<from th:action="@{/products}"	method="get" class="form-horizontal">
+
+		<div style="..." class="input-group">
+			<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+			<input th:value="${word !=null} ? ${word}" name="word" placeholder="Поиск по слову" class="from-control"/>
+		</div>
+		<div style="..." class="form-group">
+			<div class="col-sm-6 controls">
+				<button type="submit" class="btn btn-primary">Фильтровать</button>
+			</div>
+		</div>
+	</from>
 	<table class="table table-hover">
 		<thead>
 		<!--название заголовков таблицы-->
@@ -28,10 +39,7 @@
 			<td th:text="${product.id}"/>
 			<td th:text="${product.title}"/>
 			<td th:text="${product.price}"/>
-			<!--<td>-->
-			<!--<a th:text="Просмотреть"/>-->
-			<!--</td>-->
-			<!--смотреть данные о товаре на отдельной странице-->
+
 			<!--@{} - относительно корня-->
 			<td>
 				<!--/*@thymesVar id="id" type="ch"*/-->
@@ -42,37 +50,21 @@
 		</tr>
 		</tbody>
 	</table>
-	<!--просмотр всего количества товаров-->
+	<!--/*@thymesVar id="products" type="ch"*/-->
 	<span th:text="${'Всего товаров ' + products.size()}"/>
-	<!-- добавление товара -->
-	<br>
-	<!-- - /products/add -адрес отвечает за добавление товара в БД (условно)-->
-	<!--форма привязывается к созданному объекту product, которая посылает post-->
-	<form th:action="@{/products/add}"
-		  th:object="${product}" method="post" class="form-horizontal">
-
-		<div style="margin-bottom: 25px" class="input-group">
-			<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-			<!--создание полей для ввода, то что пользователь набирает, должно попасть в его поле-->
-			<input th:field="*{id}" placeholder="id (*)" class="form-control"/>
-		</div>
-
-		<div style="margin-bottom: 25px" class="input-group">
-			<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-			<input th:field="*{title}" placeholder="title (*)" class="form-control"/>
-		</div>
-
-		<div style="margin-bottom: 25px" class="input-group">
-			<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-			<input th:field="*{price}" placeholder="price (*)" class="form-control"/>
-		</div>
-
-		<div style="margin-top: 10px" class="form-group">
-			<div class="col-sm-6 controls">
-				<button type="submit" class="btn btn-primary">Add</button>
-			</div>
-		</div>
-	</form>
+	<a th:href="@{/products/add}">Добавить товар</a>
 </div>
+<!-- добавление товара -->
+<br>
+<!-- - /products/add -адрес отвечает за добавление товара в БД (условно)-->
+<!--форма привязывается к созданному объекту product, которая посылает post-->
+<!--<form th:action="@{/products/add}"-->
+<!--th:object="${product}" method="post" class="form-horizontal">-->
+
+<!--<div style="margin-bottom: 25px" class="input-group">-->
+<!--<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
+<!--&lt;!&ndash;создание полей для ввода, то что пользователь набирает, должно попасть в его поле&ndash;&gt;-->
+<!--<input th:field="*{id}" placeholder="id (*)" class="form-control"/>-->
+<!--</div>-->
 </body>
 </html>

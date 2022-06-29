@@ -31,11 +31,24 @@ public class ProductsController {
 	 * -создаётся пустой объект, далее запрос у сервиса всех имеющихся продуктов.
 	 * -дале созданный экземпляр добавляем в параметр модель и показыаем страницу products
 	 */
+//	@GetMapping
+//	public String showProductsList(Model model) {
+//		Product product = new Product();
+//		model.addAttribute("products", productsService.getAllProducts());
+//		model.addAttribute("product", product);
+//		return "products";
+//	}
+/**
+ * поиск товара,  котором есть слово "Hello"
+ * /products?word=Hello
+ * - required = false - не обязатеьный параметр
+ * */
 	@GetMapping
-	public String showProductsList(Model model) {
+	public String showProductsList(Model model, @RequestParam(value = "word", required = false) String word) {
 		Product product = new Product();
-		model.addAttribute("products", productsService.getAllProducts());
+		model.addAttribute("products", productsService.getAllProductsWitchFilter(word));
 		model.addAttribute("product", product);
+		model.addAttribute("word", word);
 		return "products";
 	}
 

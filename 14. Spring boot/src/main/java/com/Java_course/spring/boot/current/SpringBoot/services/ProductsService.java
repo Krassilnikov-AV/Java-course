@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * - ProductsService - выполняет полностью всю нашу работу
@@ -26,6 +27,14 @@ public class ProductsService {
 		return productRepository.findAll();
 	}
 
+	public List<Product> getAllProductsWitchFilter(String word) {
+		List<Product> fullList = productRepository.findAll();
+		if (word == null) {
+			return fullList;
+		}
+		return fullList.stream().filter(p -> p.getTitle().contains(word)).collect(Collectors.toList());
+	}
+
 	public void add(Product product) {
 		productRepository.save(product);
 	}
@@ -36,5 +45,9 @@ public class ProductsService {
 
 	public void deleteById(Long id) {
 		productRepository.deleteById(id);
+	}
+
+	public void saveOrUpdate(Product product) {
+			productRepository.save(product);
 	}
 }
