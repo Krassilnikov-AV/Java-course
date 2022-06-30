@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<h3 th:tetx="${product.id == 0 ? 'Добавление товара': 'Изиенение товара'}"></h3>
+<h3 th:text="${product.id == 0 ? 'Добавление товара': 'Изиенение товара'}"></h3>
 <div class="container">
 	<form th:action="@{/products/edit}"
 		  th:object="${product}" method="post" class="form-horizontal">

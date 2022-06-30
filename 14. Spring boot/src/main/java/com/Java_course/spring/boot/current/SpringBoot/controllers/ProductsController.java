@@ -39,9 +39,9 @@ public class ProductsController {
 //		return "products";
 //	}
 /**
+ * пример: /products?word=Hello
  * поиск товара,  котором есть слово "Hello"
- * /products?word=Hello
- * - required = false - не обязатеьный параметр
+ *  * - required = false - не обязатеьный параметр
  * */
 	@GetMapping
 	public String showProductsList(Model model, @RequestParam(value = "word", required = false) String word) {
@@ -66,10 +66,9 @@ public class ProductsController {
 		return "product-edit";
 	}
 
-	//	добавление
 	@PostMapping("/edit")
 	public String addProduct(@ModelAttribute(value = "product") Product product) {
-		productsService.add(product);
+		productsService.saveOrUpdate(product);
 		return "redirect:/products";
 	}
 
