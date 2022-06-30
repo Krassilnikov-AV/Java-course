@@ -41,7 +41,7 @@
 
 			<td>
 				<a th:href="@{'/products/show/' + ${product.id}}" th:text="Просмотреть"/>
-
+				<a th:href="@{'/products/edit/'+ ${product.id}}" th:text="Изменить"/>
 				<a th:href="@{'/products/delete/' + ${product.id}}" th:text="Удалить"/>
 			</td>
 		</tr>
@@ -49,6 +49,7 @@
 	</table>
 	<span th:text="${'Всего товаров ' + products.size()}"/>
 	<a th:href="@{/products/add}">Добавить товар</a>
+
 </div>
 <br>
 </body>
