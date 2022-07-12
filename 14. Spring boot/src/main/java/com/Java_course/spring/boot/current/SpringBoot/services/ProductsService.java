@@ -27,6 +27,9 @@ public class ProductsService {
 		return productRepository.findAll();
 	}
 
+	/*
+	* выполняет защиту на уровне сервиса, метод запустится при входе в ADMIN*/
+//	@Secured(value = ("ADMIN"))
 	public List<Product> getAllProductsWitchFilter(String word) {
 		List<Product> fullList = productRepository.findAll();
 		if (word == null) {
