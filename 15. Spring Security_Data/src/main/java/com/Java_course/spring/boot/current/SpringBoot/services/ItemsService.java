@@ -17,6 +17,8 @@ public class ItemsService {
 	}
 
 	public List<Item> getAllItems() {
+		// получение в консоли данных по названию, вытащенных из БД при помощи Spring DAta
+		System.out.println(itemRepository.findByTitle("Tree"));
 		return itemRepository.findAll();
 	}
 }
