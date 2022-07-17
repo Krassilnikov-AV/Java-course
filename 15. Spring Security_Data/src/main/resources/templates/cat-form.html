@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавить кота</title>
+</head>
+
+<html>
+
+<body>
+<!--привязка полей н фронтенд
+- поле id необходимо выводить в форму и скрывать, т..к. понадобится для работы с БД
+ - если не прописывать id, то значения будут обнуляться-->
+<form th:action="@{/addcat}" th:object="${cat}" method="post">
+    <span>id</span>
+    <input th:field="*{id}" type="hidden">
+    </p>
+    <span>name</span>
+    <input th:field="*{name}">
+    </p>
+    <span>color</span>
+    <input th:field="*{color}">
+    </p>
+    <button type="submit">Сохранить</button>
+</form>
+
+</body>
+</html>
