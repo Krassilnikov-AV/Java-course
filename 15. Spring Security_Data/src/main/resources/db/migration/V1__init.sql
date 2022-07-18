@@ -2,8 +2,8 @@ CREATE TABLE products (id serial, title varchar(100), price int);
 
 INSERT INTO products (title, price) VALUES ('Bread', 40), ('Milk', 80);
 
-CREATE TABLE items (id serial, title varchar(100));
- INSERT INTO items (title) VALUES ('Box'), ('Tree'), ('House');
+CREATE TABLE items (id serial, title varchar(100), cost int);
+ INSERT INTO items (title, cost) VALUES ('Box', 10), ('Tree', 40), ('House', 90);
 
 CREATE TABLE users (
     username VARCHAR(50) NOT NULL,

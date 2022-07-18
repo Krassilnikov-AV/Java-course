@@ -1,8 +1,10 @@
 package com.Java_course.spring.boot.current.SpringBoot.repositories;
 
 import com.Java_course.spring.boot.current.SpringBoot.entities.Item;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * - JpaRepository является обобщеным интерфейсом
@@ -15,4 +17,15 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
 	 * SELECT i FROM Item i WHERE i.title = 1?
 	 */
 	Item findByTitle(String title);
+
+	List<Item> findByCostBetween(int min, int max);
+//	List<Item> findByActiveCostOrOrderByTitleDesc(String name, String surname);
+	/**
+	 * возможно поменять на свой метод созданным зпросом SqL*/
+//	@Query(value = "", nativeQuery = true)
+//	List<Item> myMethodName();
+	/**
+	 * Найти все Item-ы, у которых название заканчивается на какую то подстроку*/
+	@Query(value = "SELECT i FROM Item i WHERE i.title LIKE ?1%")
+	List<Item> findByTitleWith(String substr);
 }

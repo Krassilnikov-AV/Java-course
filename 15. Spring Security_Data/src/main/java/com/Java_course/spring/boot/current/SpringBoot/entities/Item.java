@@ -19,8 +19,11 @@ public class Item {
 	@Column(name = "title")
 	private String title;
 
+	@Column(name = "cost")
+	private int cost;
+
 	@Override
 	public String toString() {
-		return String.format("Item [%d %s]", id, title);
+		return String.format("Item [id= %d title = %s cost= %d]", id, title, cost);
 	}
 }
